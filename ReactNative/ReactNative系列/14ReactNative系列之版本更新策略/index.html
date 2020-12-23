@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="zh ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一修 || 14ReactNative系列之版本更新策略</title>
+    <meta name="author" content="一修">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">一修</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>归档</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>一修</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">归档</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>14ReactNative系列之版本更新策略 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/12/23
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/ReactNative">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                ReactNative
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/混合App" style=color:#ff7d73>
+                    混合App
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ReactNative系列" style=color:#00a596>
+                    ReactNative系列
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p><img src="https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>版本更新是每个App不可缺少的功能，它既是日常版本迭代的重要工具，也是在出现问题紧急更新的法宝。目前主要有：市场更新、自主更新和热更新。</p>
+<h2 id="二、IOS"><a href="#二、IOS" class="headerlink" title="二、IOS"></a>二、IOS</h2><p>由于IOS中不能在App Store之外的地方更新App，因此所有的更新策略都是围绕着App Store来展开。目前常见做法是拿当前App版本和App Store的版本对比，若App Store版本大于当前版本，则提醒用户跳转App Store更新。多数情况下，iPhone在Wifi网络下都会自动静默完成版本更新。</p>
+<blockquote>
+<p>对于<code>企业版App</code>则需要搭建自己的更新平台，类似于Android，对比客户端和服务器上的版本，提醒用户进行下载更新。之后，用户需要信任该企业证书才能使用企业版App。</p>
+</blockquote>
+<h2 id="三、Android"><a href="#三、Android" class="headerlink" title="三、Android"></a>三、Android</h2><p>Android的方式则大有不同，Apk由于不受App市场及手机限制，可以随意安装Apk文件，所以大部分情况下都会避开市场下载，直接从自己服务器下拉最新Apk进行更新，所以也就出现了首页发现新版本、版本检测等一些功能。</p>
+<h3 id="3-1市场更新"><a href="#3-1市场更新" class="headerlink" title="3.1市场更新"></a>3.1市场更新</h3><p>这种方式和IOS一样，通过对比当前安装App版本与市场App版本，提示用户跳转应用市场，通过市场来更新App，这是一个成本最低的更新策略。</p>
+<h3 id="3-2自主更新"><a href="#3-2自主更新" class="headerlink" title="3.2自主更新"></a>3.2自主更新</h3><p>这种方式需要自己创建一整套服务用于App版本更新。主要步骤如下：</p>
+<ol>
+<li>App版本检测：分为自动检测和手动检测。自动检测是在首页加载之后进行检测，提示用户需要更新版本；手动检测是在App设置中提供入口，以供用户自己检测App是否为最新版本。需要将App的版本号和服务器上Apk的版本号作比较。</li>
+<li>Apk下载：从Apk文件服务器上下载最新版本Apk，需要展示下载进度，下载完成之后提示用户安装。需要注意的是，用户点击下载时，需要检测默认路径下有没有最新Apk，没有再进行下载，否则直接提示安装。这样可以防止恶意下载。</li>
+<li>下载完成后会提示是否安装，点击安装即可。<br>另外，还需要考虑低版本App是否能够继续使用，即是否进行强制更新。在更新策略中应该体现，后台可以选择此版本是否支持强制更新。更新教程：<a target="_blank" rel="noopener" href="https://github.com/songxiaoliang/react-native-app-upgrade">react-native-app-upgrade</a>。</li>
+</ol>
+<h2 id="四、热更新"><a href="#四、热更新" class="headerlink" title="四、热更新"></a>四、热更新</h2><p>说起RN，就不得不说说热更新，但是目前并没有一个可靠的免费平台提供支持，这使好多开发者望而却步。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/18236822-a9fb34683b1f202f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>热更新一般都是更新JS和图片，也就是在不重新安装apk的情况下更新JS和图片。目前市面上常见的热更新方案有两款：微软的<a target="_blank" rel="noopener" href="https://github.com/Microsoft/react-native-code-push">react-native-code-push</a>和RN中文网的<a target="_blank" rel="noopener" href="https://github.com/reactnativecn/react-native-pushy">react-native-pushy</a>。如果有要求也能自己搭建热更新服务。对热更新细化后还可以分为：全量热更新和补丁热更新。</p>
+<blockquote>
+<p>苹果允许使用热更新<a target="_blank" rel="noopener" href="https://developer.apple.com/programs/information/Apple_Developer_Program_Information_8_12_15.pdf">Apple’s developer agreement 条款3.3.2</a>, 但是规定不能弹框提示用户更新，影响用户体验。苹果禁的是 rollout.io, JSPatch 这类具备修改原生代码能力的框架。 Google Play也允许热更新，但必须弹框告知用户更新。在中国的android市场发布时，都必须关闭更新弹框，否则会在审核应用时以“请上传最新版本的二进制应用包”驳回应用。</p>
+</blockquote>
+<h3 id="4-1react-native-code-push"><a href="#4-1react-native-code-push" class="headerlink" title="4.1react-native-code-push"></a>4.1react-native-code-push</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33323251/article/details/79437932">热更新-CodePush最新集成总结</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_21937107/article/details/81870759">微软的React Native热更新</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8e08c7661275">热更新全方位讲解</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/shandian000/article/details/54582603">热更新原理分析与实现</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/6e96c6038d80?from=timeline">react-native-code-push进阶篇</a></p>
+<h3 id="4-2react-native-pushy"><a href="#4-2react-native-pushy" class="headerlink" title="4.2react-native-pushy"></a>4.2react-native-pushy</h3><p><a target="_blank" rel="noopener" href="http://update.reactnative.cn/home">pushy</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/741cd088033b">RN热更新react-native-pushy</a></p>
+<h3 id="4-3自主搭建热更新服务"><a href="#4-3自主搭建热更新服务" class="headerlink" title="4.3自主搭建热更新服务"></a>4.3自主搭建热更新服务</h3><p>其实就是在自己服务器上搭建一套codepush系统，这样比较简单也省事。除了服务器地址与微软的不一样，其他的完全一样。<br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/be8962d12726">ReactNative热更新之自搭建环境</a></p>
+<h3 id="4-4补丁热更新"><a href="#4-4补丁热更新" class="headerlink" title="4.4补丁热更新"></a>4.4补丁热更新</h3><p>实际上就是通过算法计算出增量补丁，使用补丁更新。算法有：google-diff-match-patch、bsdiff、bspatch等。</p>
+<ol>
+<li>服务端使用bsdiff算法将老RN包和新RN包生成一个补丁patch文件，供客户端下载。</li>
+<li>客户端下载patch文件，使用将补丁patch文件和老RN包生成一个新RN包。</li>
+</ol>
+<p><strong>欢迎大佬纠错指导，欢迎交流学习。</strong></p>
+<blockquote>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/Code4GL">https://github.com/Code4GL</a><br>公众号：code_everything<br>QQ：771841496<br>邮箱：<a href="mailto:&#x67;&#117;&#97;&#x6e;&#x6c;&#105;&#49;&#x39;&#57;&#49;&#x40;&#49;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#117;&#97;&#x6e;&#x6c;&#105;&#49;&#x39;&#57;&#49;&#x40;&#49;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+</blockquote>
+<p><img src="/images/code_everything.jpg" alt="code_everything"></p>
+
+    </div>
+
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2018 - 2020 一修
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @一修
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>

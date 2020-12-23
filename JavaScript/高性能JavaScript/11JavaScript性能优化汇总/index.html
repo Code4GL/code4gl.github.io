@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<html lang="zh ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一修 || 11JavaScript性能优化汇总</title>
+    <meta name="author" content="一修">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">一修</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>归档</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>一修</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">归档</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>11JavaScript性能优化汇总 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/12/23
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/JavaScript">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                JavaScript
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/高性能JavaScript" style=color:#00bcd4>
+                    高性能JavaScript
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/原生JS" style=color:#ffa2c4>
+                    原生JS
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p><img src="https://upload-images.jianshu.io/upload_images/18236822-ed739b07cf9eed5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>本文主要针对《高性能JavaScript》书中提到的优化方案进行总结，只列出文中推荐最高效的方案，其他方案的信息请查看之前的文章。</p>
+<h2 id="第一章-加载和执行"><a href="#第一章-加载和执行" class="headerlink" title="第一章 加载和执行"></a>第一章 加载和执行</h2><h3 id="1-1优化原则"><a href="#1-1优化原则" class="headerlink" title="1.1优化原则"></a>1.1优化原则</h3><ol>
+<li>脚本放在<code>&lt;body&gt;</code>标签底部加载，即<code>&lt;/body&gt;</code>前面；</li>
+<li>将多个脚本合并到一个脚本中引用，避免一个页面引用多个脚本；</li>
+<li>给<code>&lt;script&gt;</code>标签添加<code>defer</code>属性延迟加载脚本；</li>
+<li>根据需求，在合适的时间动态加载各个脚本；</li>
+</ol>
+<h3 id="1-2代码示例"><a href="#1-2代码示例" class="headerlink" title="1.2代码示例"></a>1.2代码示例</h3><p>先添加动态加载所需的代码，然后加载初始化页面所需的剩下的代码。</p>
+<pre><code class="JavaScript">&lt;script type=&quot;text/javascript&quot;&gt;
+    function loadScript(url, callback)&#123;
+        var script = document.createElement(&quot;script&quot;)
+        script.type = &quot;text/javascript&quot;;
+        if (script.readyState)&#123; // IE
+            script.onreadystatechange = function()&#123;
+                if (script.readyState == &quot;loaded&quot; || script.readyState == &quot;complete&quot;)&#123;
+                    script.onreadystatechange = null;
+                    callback();
+                &#125;
+            &#125;;
+        &#125; else &#123; // Others
+            script.onload = function()&#123;
+                callback();
+            &#125;;
+        &#125;
+        script.src = url;
+        document.getElementsByTagName(&quot;head&quot;)[0].appendChild(script);
+    &#125;
+    loadScript(&quot;the-rest.js&quot;, function()&#123;
+        Application.init();
+    &#125;);
+&lt;/script&gt;</code></pre>
+<h2 id="第二章-数据存取"><a href="#第二章-数据存取" class="headerlink" title="第二章 数据存取"></a>第二章 数据存取</h2><h3 id="2-1优化原则"><a href="#2-1优化原则" class="headerlink" title="2.1优化原则"></a>2.1优化原则</h3><ol>
+<li>若跨作用域的值引用一次以上，请将其存入局部变量中重复使用；</li>
+<li>避免使用<code>with</code>语句，谨慎使用<code>try-catch</code>语句，因为它们会改变作用域链；</li>
+<li>除非确实有必要，才去使用动态作用域；</li>
+<li>小心使用闭包，防止内存泄漏；</li>
+<li>对象成员嵌套越深，读取速度就越慢；</li>
+<li>将对象成员、数组元素像跨域变量一样存入局部变量来使用，同时避免用在对象的成员方法上，因为<code>this</code>的存在。</li>
+</ol>
+<h3 id="2-2代码示例"><a href="#2-2代码示例" class="headerlink" title="2.2代码示例"></a>2.2代码示例</h3><pre><code class="JavaScript">// 引用一次document
+function initUI()&#123;
+    var doc = document,
+    bd = doc.body,
+    links = doc.getElementsByTagName(&quot;a&quot;), 
+    i = 0,
+    len = links.length;
+    while(i &lt; len)&#123;
+        update(links[i++]);
+    &#125;
+    doc.getElementById(&quot;go-btn&quot;).onclick = function()&#123;
+        start();
+    &#125;;
+    bd.className = &quot;active&quot;;
+&#125;</code></pre>
+<h2 id="第三章-DOM编程"><a href="#第三章-DOM编程" class="headerlink" title="第三章 DOM编程"></a>第三章 DOM编程</h2><h3 id="3-1优化原则"><a href="#3-1优化原则" class="headerlink" title="3.1优化原则"></a>3.1优化原则</h3><ol>
+<li>减少DOM访问次数，将运算尽量留在JavaScript端来处理；</li>
+<li>在对性能要求苛刻的情况下，推荐使用<code>innerHTML</code>而非DOM原生方法更新一大段HTML；</li>
+<li>使用<code>cloneNode</code>代替<code>createElement</code>来更新页面，性能稍微好点；</li>
+<li>将HTML集合拷贝到数组中，访问它的属性会更快；</li>
+<li>使用能区分元素节点的API获取目标节点，避免取出其他类型的节点；</li>
+<li>利用CSS选择器，使用<code>querySelectorAll</code>或<code>querySelector</code>来获取节点效率更快；</li>
+<li>尽量少的改变元素的几何属性，防止页面重排或重绘；</li>
+<li>避免使用能刷新渲染队列的属性，如<code>offsetTop</code>等；</li>
+<li>合并多次对DOM和样式的修改，然后一次处理掉；</li>
+<li>大量数据下，避免使用<code>:hover</code>这个CSS伪选择器；</li>
+<li>使用事件委托处理DOM事件，减少事件处理器的数量。</li>
+</ol>
+<h3 id="3-2代码示例"><a href="#3-2代码示例" class="headerlink" title="3.2代码示例"></a>3.2代码示例</h3><pre><code class="JavaScript">function collectionNodesLocal() &#123;
+    var coll = document.getElementsByTagName(&#39;div&#39;),
+    len = coll.length,
+    name = &#39;&#39;,
+    el = null;
+    for (var count = 0; count &lt; len; count++) &#123;
+        el = coll[count];
+        name = el.nodeName;
+        name = el.nodeType;
+        name = el.tagName;
+    &#125;
+    return name;
+&#125;;</code></pre>
+<h2 id="第四章-算法和流程控制"><a href="#第四章-算法和流程控制" class="headerlink" title="第四章 算法和流程控制"></a>第四章 算法和流程控制</h2><h3 id="4-1优化原则"><a href="#4-1优化原则" class="headerlink" title="4.1优化原则"></a>4.1优化原则</h3><ol>
+<li>避免使用<code>for-in</code>循环，使用其他循环代替它；</li>
+<li>最小化循环中的属性查找，并使用倒序循环；</li>
+<li>使用<code>达夫设备</code>模式减少迭代次数；</li>
+<li>在运行速度要求严格时，避免使用<code>forEach</code>循环；</li>
+<li>根据离散值和值域，以及条件判断次数，选择使用<code>if-else</code>或<code>switch</code>；</li>
+<li>使用查找表代替条件语句，即将返回值集合存入数组中，操作数据获取对应的值；</li>
+<li>递归可能会导致浏览器的调用栈大小限制问题，将递归改为迭代可以避免；</li>
+<li>使用Memoization缓存计算结果，避免重复计算。</li>
+</ol>
+<h3 id="4-2代码示例"><a href="#4-2代码示例" class="headerlink" title="4.2代码示例"></a>4.2代码示例</h3><pre><code class="JavaScript">//最小化属性查找并反转：比原始版本快50%~60%
+for (var i=items.length; i--; )&#123;
+    process(items[i]);
+&#125;
+var j = items.length;
+while (j--)&#123;
+    process(items[j]]);
+&#125;
+var k = items.length-1;
+do &#123;
+    process(items[k]);
+&#125; while (k--);</code></pre>
+<pre><code class="JavaScript">// 升级版Duff’s Device：尽管这种方式用两次循环代替之前一次循环，但移除了循环体中的switch语句，速度比原始更快。
+var i = items.length % 8;
+while(i)&#123;
+    process(items[i--]);
+&#125;
+i = Math.floor(items.length / 8);
+while(i)&#123;
+    process(items[i--]);
+    process(items[i--]);
+    process(items[i--]);
+    process(items[i--]);
+    process(items[i--]);
+    process(items[i--]);
+    process(items[i--]);
+    process(items[i--]);
+&#125;</code></pre>
+<pre><code class="JavaScript">// 将返回值存入数组
+var results = [result0, result1, result2, result3, result4, result5, result6, result7, result8, result9, result10]
+// 利用数组返回当前结果
+return results[value];</code></pre>
+<h2 id="第五章-字符串和正则表达式"><a href="#第五章-字符串和正则表达式" class="headerlink" title="第五章 字符串和正则表达式"></a>第五章 字符串和正则表达式</h2><h3 id="5-1优化原则"><a href="#5-1优化原则" class="headerlink" title="5.1优化原则"></a>5.1优化原则</h3><ol>
+<li>以原有字符串作为基础合并字符串，避免使用临时字符串；</li>
+<li>避免使用<code>Array.prototype.join</code>合并数组中的字符串；</li>
+<li>避免使用<code>String.prototype.concat</code>合并字符串；</li>
+<li>尽可能具体正则表达式中化分隔符之间的字符串匹配模式；</li>
+<li>使相邻的字元互斥，避免嵌套量词对同一字符串的相同部分多次匹配，通过重复利用预查的原子组去除不必要的回溯。</li>
+</ol>
+<h3 id="5-2代码示例"><a href="#5-2代码示例" class="headerlink" title="5.2代码示例"></a>5.2代码示例</h3><pre><code class="JavaScript">// 以下优化会提速10%~40%，原因是这样做避免使用了临时字符串。
+str += &quot;one&quot;;
+str += &quot;two&quot;;
+等价于
+str = str + &quot;one&quot; + &quot;two&quot;;
+等价于
+str = ((str + &quot;one&quot;) + &quot;two&quot;)</code></pre>
+<h2 id="第六章-快速响应的用户界面"><a href="#第六章-快速响应的用户界面" class="headerlink" title="第六章 快速响应的用户界面"></a>第六章 快速响应的用户界面</h2><h3 id="6-1优化原则"><a href="#6-1优化原则" class="headerlink" title="6.1优化原则"></a>6.1优化原则</h3><ol>
+<li>源于Robert Moller 1968年的研究，界面反应时间超过<code>100毫秒</code>，用户就会感到自己与界面失去联系；</li>
+<li>使用定时器释放UI控制权，定时器延迟至少<code>25毫秒</code>，保证UI更新；</li>
+<li>使用定时器处理数组循环，增加了处理总耗时，但避免了UI锁定带来糟糕的用户体验；</li>
+<li>将耗时较长的任务分割成多个小任务，避免不好的体验；</li>
+<li>一个定时器可以同时处理多个任务，但需保证一轮总耗时不超过<code>50毫秒</code>；</li>
+<li>使用Web Workers在UI线程外执行JavaScript代码。</li>
+</ol>
+<h3 id="6-2代码示例"><a href="#6-2代码示例" class="headerlink" title="6.2代码示例"></a>6.2代码示例</h3><pre><code class="JavaScript">// 一个定时器处理多个小任务
+function timedProcessArray(items, process, callback)&#123;
+    var todo = items.concat(); // 克隆原始数组
+    setTimeout(function()&#123;
+        var start = +new Date(); // +可以把Date转换成数字，方便计算
+        do &#123;
+            process(todo.shift());
+        &#125; while (todo.length &gt; 0 &amp;&amp; (+new Date() - start &lt; 50));
+        if (todo.length &gt; 0)&#123;
+            setTimeout(arguments.callee, 25);
+        &#125; else &#123;
+            callback(items);
+        &#125; 
+    &#125;, 25);
+&#125;</code></pre>
+<h2 id="第七章-Ajax"><a href="#第七章-Ajax" class="headerlink" title="第七章 Ajax"></a>第七章 Ajax</h2><h3 id="7-1优化原则"><a href="#7-1优化原则" class="headerlink" title="7.1优化原则"></a>7.1优化原则</h3><ol>
+<li>使用JSON或JSON-P代替其他数据结构；</li>
+<li>自定义数据格式非常简洁，下载和解析都很快，但不易阅读；</li>
+<li>使用<code>Expires</code>头信息将数据缓存在浏览器；</li>
+</ol>
+<h3 id="7-2优化原则"><a href="#7-2优化原则" class="headerlink" title="7.2优化原则"></a>7.2优化原则</h3><pre><code class="JavaScript">// 简化后的JSON数据
+[
+    [ 1, &quot;alice&quot;, &quot;Alice Smith&quot;, &quot;alice@alicesmith.com&quot; ],
+    [ 2, &quot;bob&quot;, &quot;Bob Jones&quot;, &quot;bob@bobjones.com&quot; ],
+    [ 3, &quot;carol&quot;, &quot;Carol Williams&quot;, &quot;carol@carolwilliams.com&quot; ],
+    [ 4, &quot;dave&quot;, &quot;Dave Johnson&quot;, &quot;dave@davejohnson.com&quot; ]
+]</code></pre>
+<pre><code class="JavaScript">// 自定义数据结构
+1:alice:Alice Smith:alice@alicesmith.com;
+2:bob:Bob Jones:bob@bobjones.com; 
+3:carol:Carol Williams:carol@carolwilliams.com;
+4:dave:Dave Johnson:dave@davejohnson.com</code></pre>
+<h2 id="第八章-编程实践"><a href="#第八章-编程实践" class="headerlink" title="第八章 编程实践"></a>第八章 编程实践</h2><h3 id="8-1优化原则"><a href="#8-1优化原则" class="headerlink" title="8.1优化原则"></a>8.1优化原则</h3><ol>
+<li>避免使用<code>eval()</code>和<code>Function()</code>，小心使用<code>setTimeout()</code>和<code>setInterval()</code>，因为可能会造成双重求值；</li>
+<li>使用数组和对象直接量，避免使用<code>new</code>；</li>
+<li>使用延迟加载或条件预加载来避免重复工作；</li>
+<li>优先使用位操作和原生方法来提高性能。</li>
+</ol>
+<h3 id="8-2代码示例"><a href="#8-2代码示例" class="headerlink" title="8.2代码示例"></a>8.2代码示例</h3><pre><code class="JavaScript">var myObject = &#123; // 创建对象
+    name: &quot;Nicholas&quot;,
+    count: 50,
+    flag: true,
+    pointer: null
+&#125;;
+var myArray = [&quot;Nicholas&quot;, 50, true, null]; // 创建数组</code></pre>
+<pre><code class="JavaScript">// 延迟加载
+function addHandler(target, eventType, handler)&#123;
+    // 复写现有函数
+    if (target.addEventListener)&#123; //DOM2 Events
+        addHandler = function(target, eventType, handler)&#123;
+            target.addEventListener(eventType, handler, false);
+        &#125;;
+    &#125; else &#123; //IE
+        addHandler = function(target, eventType, handler)&#123;
+            target.attachEvent(&quot;on&quot; + eventType, handler);
+        &#125;;
+    &#125;
+    // 调用新函数 
+    addHandler(target, eventType, handler);
+&#125;</code></pre>
+<pre><code class="JavaScript">// 条件预加载
+var addHandler =
+    document.body.addEventListener
+    ?
+    function(target, eventType, handler)&#123;
+    target.addEventListener(eventType, handler, false);&#125;
+    :
+    function(target, eventType, handler)&#123;
+    target.attachEvent(&quot;on&quot; + eventType, handler);&#125;;</code></pre>
+<h2 id="第九章-构建并部署高性能JavaScript应用"><a href="#第九章-构建并部署高性能JavaScript应用" class="headerlink" title="第九章 构建并部署高性能JavaScript应用"></a>第九章 构建并部署高性能JavaScript应用</h2><h3 id="9-1优化原则"><a href="#9-1优化原则" class="headerlink" title="9.1优化原则"></a>9.1优化原则</h3><ol>
+<li>使用构建工具自动化构建工程；</li>
+<li>使用工具合并多个JavaScript文件；</li>
+<li>使用工具预处理JavaScript文件；</li>
+<li>使用工具压缩JavaScript；</li>
+<li><code>Accept-Encoding</code>头进行HTTP压缩；</li>
+<li>使用内容分发网络CDN提升响应速度。</li>
+</ol>
+<h2 id="第十章-工具"><a href="#第十章-工具" class="headerlink" title="第十章 工具"></a>第十章 工具</h2><p>主要介绍常见的性能分析和网络分析工具，不过由于时间关系，这些工具大多数已经过时了，在此就不多做介绍了。</p>
+<p><strong>欢迎大佬纠错指导，欢迎交流学习。</strong></p>
+<blockquote>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/Code4GL">https://github.com/Code4GL</a><br>公众号：code_everything<br>QQ：771841496<br>邮箱：<a href="mailto:&#103;&#117;&#x61;&#x6e;&#x6c;&#x69;&#x31;&#x39;&#57;&#49;&#64;&#49;&#54;&#51;&#x2e;&#x63;&#x6f;&#109;">&#103;&#117;&#x61;&#x6e;&#x6c;&#x69;&#x31;&#x39;&#57;&#49;&#64;&#49;&#54;&#51;&#x2e;&#x63;&#x6f;&#109;</a></p>
+</blockquote>
+<p><img src="/images/code_everything.jpg" alt="code_everything"></p>
+
+    </div>
+
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2018 - 2020 一修
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @一修
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="zh ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一修 || 09《高性能JavaScript》第九章 构建并部署高性能JavaScript应用</title>
+    <meta name="author" content="一修">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">一修</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>归档</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>一修</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">归档</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>09《高性能JavaScript》第九章 构建并部署高性能JavaScript应用 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/12/23
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/JavaScript">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                JavaScript
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/高性能JavaScript" style=color:#00bcd4>
+                    高性能JavaScript
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/原生JS" style=color:#00bcd4>
+                    原生JS
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p><img src="https://upload-images.jianshu.io/upload_images/18236822-ed739b07cf9eed5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>出于出书时间的考虑，本章使用到的技术可能已经过时，主要理解其思想。本章的目的是了解如何有效地组织并部署基于JavaScript的Web应用的一些必要知识。</p>
+<ol>
+<li>Apache Ant：是一个软件构建自动化工具；</li>
+<li>合并多个JavaScript文件，减少页面渲染所需的HTTP请求数；</li>
+<li>预处理JavaScript源文件并不会让应用变得更快，但它允许你做其他的事情，如有条件的插入测试代码；</li>
+<li>JavaScript压缩：把JavaScript文件中所有与运行无关的部分进行剥离的过程。该过程通常可以将文件大小减半，促使文件下载的更快；</li>
+<li>合并、预处理和压缩这些步骤既能在构建时进行，也能在运行时进行。但只要能在构建时完成的工作，就不要留在运行时去做；</li>
+<li>JavaScript的HTTP压缩：HTTP请求头中<code>Accept-Encoding</code>可以用来压缩文档，以得到更快的下载，值包括<code>gzip</code>、<code>compress</code>、<code>deflate</code>和<code>identity</code>。</li>
+<li>缓存JavaScript文件：服务器通过“Expires HTTP响应头”来告诉客户端一个资源应当缓存的时间；</li>
+<li>使用CDN：内容分发网络可以极大地减少网络延迟；</li>
+<li>部署JavaScript资源通常需要复制大量文件到一台或多台远程主机，可以通过工具来处理，如Apache Ant。</li>
+</ol>
+<p><strong>欢迎大佬纠错指导，欢迎交流学习。</strong></p>
+<blockquote>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/Code4GL">https://github.com/Code4GL</a><br>公众号：code_everything<br>QQ：771841496<br>邮箱：<a href="mailto:&#103;&#117;&#97;&#110;&#x6c;&#105;&#49;&#57;&#x39;&#x31;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#x6f;&#109;">&#103;&#117;&#97;&#110;&#x6c;&#105;&#49;&#57;&#x39;&#x31;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#x6f;&#109;</a></p>
+</blockquote>
+<p><img src="/images/code_everything.jpg" alt="code_everything"></p>
+
+    </div>
+
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2018 - 2020 一修
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @一修
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>
