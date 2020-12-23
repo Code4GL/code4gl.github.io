@@ -80,7 +80,7 @@ PUB_HOSTED_URL              [https://pub.flutter-io.cn](ht
 
 #### 1.3.3 Connected device
 
-关于设备分为两种：真机和模拟器。模拟器推荐可以参考之前的文章[ReactNative系列之开发工具-模拟器选择](https://www.jianshu.com/p/c8b3c549d707)，推荐`Genymotion`专业开发Android模拟器。
+关于设备分为两种：真机和模拟器。模拟器推荐可以参考之前的文章[ReactNative系列之开发工具-模拟器选择](/ReactNative/ReactNative系列/08ReactNative系列之开发工具-模拟器选择/)，推荐`Genymotion`专业开发Android模拟器。
 
 **欢迎大佬纠错指导，欢迎交流学习。**
 
