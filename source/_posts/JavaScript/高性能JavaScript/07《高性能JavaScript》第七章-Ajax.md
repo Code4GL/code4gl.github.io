@@ -1,7 +1,7 @@
 ---
-title: 08《高性能JavaScript》第七章 Ajax
+title: 07《高性能JavaScript》第七章 Ajax
 date: 2020-12-23 14:40:51
-excerpt: 《高性能JavaScript》第七章 Ajax
+excerpt: Ajax从最基本层面来说，是一种与服务器通信而无须重载页面的方法；数据可以从服务器获取或者发送给服务器。有多种不同的方法建立这种通信通道，每种方法都有各自的优点和限制。
 categories: JavaScript
 tags:
     - 高性能JavaScript

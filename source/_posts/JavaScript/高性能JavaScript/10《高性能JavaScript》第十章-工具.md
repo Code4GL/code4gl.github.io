@@ -1,7 +1,7 @@
 ---
-title: 11《高性能JavaScript》第十章 工具
+title: 10《高性能JavaScript》第十章 工具
 date: 2020-12-23 14:46:29
-excerpt: 《高性能JavaScript》第十章 工具
+excerpt: 出于出书时间的考虑，本章使用到的工具可能已经过时。
 categories: JavaScript
 tags:
     - 高性能JavaScript

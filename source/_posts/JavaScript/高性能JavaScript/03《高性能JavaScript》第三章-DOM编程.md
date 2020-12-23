@@ -1,7 +1,7 @@
 ---
 title: 03《高性能JavaScript》第三章 DOM编程
 date: 2020-12-23 14:21:42
-excerpt: 《高性能JavaScript》第三章 DOM编程
+excerpt: 文档对象模型（DOM）是一个独立于语言的，用于操作`XML`和`HTML`文档操作的程序接口（API）。在浏览器中，主要用来与`HTML`文档打交道，同样也用在Web程序中获取`XML`文档，并使用DOM API来访问文档中的数据。
 categories: JavaScript
 tags:
     - 高性能JavaScript

@@ -1,7 +1,7 @@
 ---
-title: 12JavaScript性能优化汇总
+title: 11JavaScript性能优化汇总
 date: 2020-12-23 14:47:28
-excerpt: JavaScript性能优化汇总
+excerpt: 本文主要针对《高性能JavaScript》书中提到的优化方案进行总结，只列出文中推荐最高效的方案，其他方案的信息请查看之前的文章。
 categories: JavaScript
 tags:
     - 高性能JavaScript

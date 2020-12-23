@@ -1,7 +1,7 @@
 ---
-title: 10《高性能JavaScript》第九章 构建并部署高性能JavaScript应用
+title: 09《高性能JavaScript》第九章 构建并部署高性能JavaScript应用
 date: 2020-12-23 14:45:26
-excerpt: 《高性能JavaScript》第九章 构建并部署高性能JavaScript应用
+excerpt: 出于出书时间的考虑，本章使用到的技术可能已经过时，主要理解其思想。本章的目的是了解如何有效地组织并部署基于JavaScript的Web应用的一些必要知识。
 categories: JavaScript
 tags:
     - 高性能JavaScript

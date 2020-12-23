@@ -1,5 +1,5 @@
 ---
-title: 09《高性能JavaScript》第八章 编程实践
+title: 08《高性能JavaScript》第八章 编程实践
 date: 2020-12-23 14:44:00
 excerpt: 《高性能JavaScript》第八章 编程实践
 categories: JavaScript
