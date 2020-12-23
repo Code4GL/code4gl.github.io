@@ -7,7 +7,7 @@ tags:
     - Flutter系列
 ---
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-921b445577766d10.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![flutter](/images/flutter/flutter.png)
 
 ## 一、前期工作
 
@@ -47,7 +47,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 这是本人首次运行时检测的问题：
 
-```text
+```terminal
 Doctor summary (to see all details, run flutter doctor -v):
 [✓] Flutter (Channel stable, v1.5.4-hotfix.2, on Mac OS X 10.13.6 17G6030,
     locale zh-Hans-CN)
@@ -93,18 +93,18 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 运行`flutter doctor --android-licenses`：
 
-```config
+```terminal
 A newer version of the Android SDK is required. To update, run:
 /Users/xxx/soft/AndroidSDK/tools/bin/sdkmanager --update
 ```
 
 根据提示运行：`/Users/xxx/soft/AndroidSDK/tools/bin/sdkmanager --update`。拼网速的时候到了，有时候运行命令后没进入此状态，请重新运行几次。
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-dcc61db332e896cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![podFile](/images/flutter/flutterSeries/flutterSeries02/android-license.png)
 
 下载安装完成之后，在此运行`flutter doctor --android-licenses`，会出现各种协议需要同意，一路输入`y`，然后`回车`即可。最后再运行`flutter doctor`监测一下，问题已经解决。
 
-```text
+```terminal
 [✓] Android toolchain - develop for Android devices (Android SDK version 28.0.3)
 ```
 
@@ -176,7 +176,7 @@ source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 
 使用前8kb/s的速度，看看使用后的速度，这还不是峰值。
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-9744370fcf06928c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![podFile](/images/flutter/flutterSeries/flutterSeries02/podFile.png)
 
 经过一系列操作过后，再运行`pod setup`。运行完成之后，以为就要开始创建项目了，但是太天真了。
 

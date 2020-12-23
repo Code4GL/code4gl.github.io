@@ -7,7 +7,7 @@ tags:
     - Flutter系列
 ---
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-921b445577766d10.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![flutter](/images/flutter/flutter.png)
 
 ## 一、概述
 
@@ -16,7 +16,7 @@ tags:
 运行`flutter create xxx_xxx`，看到以下画面说明项目创建成功。
 > 请注意：项目名称只能由`小写字母`、`数字`或`下划线`组成，即`[a-z0-9_]`。
 
-```teminal
+```terminal
 All done!
 [✓] Flutter is fully installed. (Channel stable, v1.5.4-hotfix.2, on Mac OS X
     10.13.6 17G7024, locale zh-Hans-CN)
