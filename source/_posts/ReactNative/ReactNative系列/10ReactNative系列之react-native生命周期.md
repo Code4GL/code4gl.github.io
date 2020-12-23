@@ -3,9 +3,9 @@ title: 10ReactNative系列之react-native生命周期
 date: 2020-12-23 11:06:02
 excerpt: 开发RN，必不可少的就是它的基础框架react-native。对于框架的学习，官网上有很多很详细的介绍，这里就不多讲了。像`props`、`state`等重要属性都有讲解，只是讲的比较简单，不太好理解。如果感觉不好理解，推荐去React官网看看。因为RN就是基于reactjs来编写的，下沉的去学习reactjs是使自己的操作更规范的一个不错方法。
 tags:
-    - ReactNative
+    - ReactNative系列
     - 混合App
-categories: ReactNative系列
+categories: ReactNative
 ---
 
 ![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

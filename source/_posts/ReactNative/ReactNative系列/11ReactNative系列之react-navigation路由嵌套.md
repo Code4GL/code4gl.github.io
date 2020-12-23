@@ -3,9 +3,9 @@ title: 11ReactNative系列之react-navigation路由嵌套
 date: 2020-12-23 11:08:02
 excerpt: react-navigation是FaceBook在2017年1月份才推出的一款导航组件，致力于解决导航卡顿，数据传递，Tabbar和Navigator布局，支持redux。并且在0.44发布的时将之前一直存在问题的Navigator废弃了，在之后的项目中几乎都使用其来作为导航，有原生导航的体验。对于react-navigation的基础学习，Navigation官网已经写得很详细了，网上也有很多教程。此次，主要对导航路由嵌套策略做一点讨论。
 tags:
-    - ReactNative
+    - ReactNative系列
     - 混合App
-categories: ReactNative系列
+categories: ReactNative
 ---
 
 ![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

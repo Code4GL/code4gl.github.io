@@ -3,9 +3,9 @@ title: 12ReactNative系列之App功能点汇总
 date: 2020-12-23 11:09:13
 excerpt: 通过不断的学习实践，才发现其实RN的学习成本还是蛮高的。不仅需要熟悉前端的常用技术：JS、CSS、JSX、DOM等，还需要对Android和IOS等原生技术有所了解。这样才能做出一个功能完整的App。下面，主要对App相关功能做个汇总。
 tags:
-    - ReactNative
+    - ReactNative系列
     - 混合App
-categories: ReactNative系列
+categories: ReactNative
 ---
 
 ![image](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

@@ -3,9 +3,9 @@ title: 03ReactNative系列之Windows环境搭建-Node环境
 date: 2020-12-23 10:19:26
 excerpt: Node是一个让JavaScript运行在服务端的开发平台，它让JavaScript成为与PHP、Python、Perl、Ruby 等服务端语言平起平坐的脚本语言。发布于2009年5月，由Ryan Dahl开发，实质是对Chrome V8引擎进行了封装。同样，RN开发主要也是基于JavaScript编码，所以Node环境也是必不可少的。
 tags:
-    - ReactNative
+    - ReactNative系列
     - 混合App
-categories: ReactNative系列
+categories: ReactNative
 ---
 
 ![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

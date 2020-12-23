@@ -3,9 +3,9 @@ title: 09ReactNative系列之第一个RN项目
 date: 2020-12-23 11:04:38
 excerpt: 在搭建好环境之后，接下来就是创建咱们第一个RN项目。
 tags:
-    - ReactNative
+    - ReactNative系列
     - 混合App
-categories: ReactNative系列
+categories: ReactNative
 ---
 
 ![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

@@ -3,9 +3,9 @@ title: 05ReactNative系列之Mac环境搭建-IOS环境
 date: 2020-12-23 10:28:08
 excerpt: 众所周知，正常情况下，Windows系统只能进行Android开发，若想进行IOS开发，只有苹果系统才能完成，而且同时可以进行Android开发。因此，Mac上环境搭建分为IOS和Android两种。
 tags:
-    - ReactNative
+    - ReactNative系列
     - 混合App
-categories: ReactNative系列
+categories: ReactNative
 ---
 
 ![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

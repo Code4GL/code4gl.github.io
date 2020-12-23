@@ -3,9 +3,9 @@ title: 14ReactNative系列之版本更新策略
 date: 2020-12-23 11:12:23
 excerpt: 版本更新是每个App不可缺少的功能，它既是日常版本迭代的重要工具，也是在出现问题紧急更新的法宝。目前主要有：市场更新、自主更新和热更新。
 tags:
-    - ReactNative
+    - ReactNative系列
     - 混合App
-categories: ReactNative系列
+categories: ReactNative
 ---
 
 ![image](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

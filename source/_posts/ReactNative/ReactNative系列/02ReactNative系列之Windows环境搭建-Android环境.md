@@ -3,9 +3,9 @@ title: 02ReactNative系列之Windows环境搭建-Android环境
 date: 2020-12-23 10:16:28
 excerpt: 目前市面上App系统主要由Android和IOS系统霸占，想要开发App安卓环境是必须要满足的。后期主要用于安卓模拟器的运行及debug调试。
 tags:
-    - ReactNative
+    - ReactNative系列
     - 混合App
-categories: ReactNative系列
+categories: ReactNative
 ---
 
 ![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

@@ -3,9 +3,9 @@ title: 01ReactNative系列之Windows环境搭建-Java环境
 date: 2020-12-23 10:14:14
 excerpt: 首先，Windows环境下只能开发Android，所以Windows环境搭建只针对Android开发来说。当然，使用特殊手段也能进行IOS开发，比如“黑苹果”之类的就另说了。
 tags:
-    - ReactNative
+    - ReactNative系列
     - 混合App
-categories: ReactNative系列
+categories: ReactNative
 ---
 
 ![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

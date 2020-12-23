@@ -3,9 +3,9 @@ title: 13ReactNative系列之安全策略
 date: 2020-12-23 11:11:15
 excerpt: 对于安全问题更多的是出现在Android系统上，IOS由于系统的封闭保证了App的安全。即使这样，也没有绝对的安全，安全都是相对的，我们只能尽可能的做到安全。
 tags:
-    - ReactNative
+    - ReactNative系列
     - 混合App
-categories: ReactNative系列
+categories: ReactNative
 ---
 
 ![image](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

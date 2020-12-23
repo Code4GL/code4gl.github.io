@@ -3,9 +3,9 @@ title: 06ReactNative系列之Mac环境搭建-Android环境
 date: 2020-12-23 10:57:18
 excerpt: Android环境是在上面IOS环境搭建好的基础上进行的，以上公共软件的安装不在复述。
 tags:
-    - ReactNative
+    - ReactNative系列
     - 混合App
-categories: ReactNative系列
+categories: ReactNative
 ---
 
 ![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

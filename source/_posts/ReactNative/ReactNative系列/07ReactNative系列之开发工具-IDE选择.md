@@ -3,9 +3,9 @@ title: 07ReactNative系列之开发工具-IDE选择
 date: 2020-12-23 10:58:28
 excerpt: 俗话说“工欲善其事，必先利其器”。在最初开发的时候，便寻觅良久，对常用工具进行了简单的总结，排名分先后。
 tags:
-    - ReactNative
+    - ReactNative系列
     - 混合App
-categories: ReactNative系列
+categories: ReactNative
 ---
 
 ![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

@@ -3,9 +3,9 @@ title: 04ReactNative系列之Windows环境搭建-Git环境
 date: 2020-12-23 10:21:28
 excerpt: 关于Git环境，实际上是为了依赖包的下载提供服务的，因为npm也是依赖于Git进行包管理的。因此，Git环境也是必须的，老版本官网上会有写到。
 tags:
-    - ReactNative
+    - ReactNative系列
     - 混合App
-categories: ReactNative系列
+categories: ReactNative
 ---
 
 ![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

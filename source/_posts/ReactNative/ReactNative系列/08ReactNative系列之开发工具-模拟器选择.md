@@ -3,9 +3,9 @@ title: 08ReactNative系列之开发工具-模拟器选择
 date: 2020-12-23 11:01:07
 excerpt: 其实对于模拟器选择，只是针对Android而言。因为IOS的模拟器就在XCode里面，也只能用它。Android模拟器主要分三种：AVD、Genymotion和游戏模拟器。第一种是之前讲过的Android SDK Manager自带的；第二种是国外的一款专门开发使用的模拟器；第三种就是市场上玩游戏的Android模拟器。第一种太卡，第三种版本太少，适合业余开发使用的。所以`推荐`第二种Genymotion。
 tags:
-    - ReactNative
+    - ReactNative系列
     - 混合App
-categories: ReactNative系列
+categories: ReactNative
 ---
 
 ![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
