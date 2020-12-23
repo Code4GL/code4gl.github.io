@@ -49,7 +49,8 @@ Android SDK Manager是安卓SDK管理工具，它可以管理你计算机上的�
 # 五、常见依赖包
 安装成功之后，会产生两个启动文件，一个是AVD Manager，一个是SDK Manager。前者是自带的安卓手机模拟器，为项目调试准备的，不过是相当的卡，不建议使用，后面会有专门推荐使用工具；后者就是安卓依赖的管理器，点击启动进入以下窗口。
 ![image.png](https://upload-images.jianshu.io/upload_images/18236822-55dabc6ab533cc12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-##5.1常见包说明
+## 5.1常见包说明
+
 后缀 | 说明
 ---|---
 Android SDK Tools | 即SDK Manager，方便以后版本更新。

@@ -25,6 +25,7 @@ Android的`icon`存放在`android/app/src/main/res/`目录，里面会有五个�
 - mipmap-xhdpi：96x96
 - mipmap-xxhdpi：144x144
 - mipmap-xxxhdpi：192x192
+
 ## 2.2IOS
 IOS的话，就需要在XCode上进行添加，将对应的尺寸拖进对应的位置即可。
 
@@ -36,10 +37,12 @@ IOS的话，就需要在XCode上进行添加，将对应的尺寸拖进对应的
 - iPhone Spotlight：40@2x、40@3x
 - iPhone App：60@2x、60@3x
 - App Store：1024x1024
+
 # 三、启动页
 RN的启动页使用需要借助一个第三方组件[react-native-splash-screen](https://github.com/crazycodeboy/react-native-splash-screen)，进入GitHub主页可以看到它的集成过程和使用方法。这里就不讲它的集成过程，官网都有详细的教程。主要讲一下集成过程中可能会出现的问题。
 
 ![](https://upload-images.jianshu.io/upload_images/18236822-7965ed1ba7b3e4a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ## 3.1Android
 在集成Android的过程中会发现，在当前版本MainActivity中没有`onCreate`这个方法，需要把此方法复制到MainActivity中，同时将Bundle包也引入才能配置成功。
 
@@ -54,7 +57,8 @@ Android启动图对应尺寸如下：
 - drawable-mdpi：320x480
 - drawable-xhdpi：720x1280
 - drawable-xxhdpi：960x1600
-- drawable-xxxhdpi：1280x1920 
+- drawable-xxxhdpi：1280x1920
+
 ## 3.2IOS
 在IOS的配置过程中，不熟悉XCode的同志，不容易找到的第4步对应的位置：
 
@@ -106,6 +110,7 @@ Android启动图对应尺寸如下：
 - Fetch被称为是Ajax的替代品，基于promise设计的数据请求工具，相对比较底层，需要额外的封装会比较多。有兴趣的可以去学习学习[Fetch](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)；
 - Axios则是较为高级的请求工具，已经做好了拦截器等工具的封装，非常适合不愿再做封装的同志使用，简单轻便，[axios中文网](http://www.axios-js.com/zh-cn/)地址。
 下面对axios做了简单的封装处理，可以作为参考：
+
 ```
 import axios from 'axios';
 import { Toast } from '@ant-design/react-native';
@@ -180,6 +185,7 @@ export const asiosPost = (url, params, config) => new Promise((resolve, reject) 
     });
 });
 ```
+
 # 七、消息推送
 ## 7.1、MobPush
 MobPush放在第一位是因为它的免费，不仅是普通的推送免费，厂商推送也是免费的，这在其他平台是找不到的。其次，它的短信服务也有免费的，所以极力推荐。只可惜不支持RN，若要集成，需要做原生处理。[http://www.mob.com/mobService/mobpush](http://www.mob.com/mobService/mobpush)

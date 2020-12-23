@@ -14,6 +14,7 @@ categories: ReactNative系列
 1. Visual Studio Code`推荐`：简称“VS Code”，可以说是微软开发的良心产品，在Windows、Mac和Linux三端都可以运行，它最突出的特点就是轻，速度快，它具有一个插件库，可以扩展很多插件，包括RN项目开发的React Native Tools插件，而且最重要一点是免费的。[VS Code官网](https://code.visualstudio.com/)
 2. Sublime Text 3：老牌的代码编辑工具，也是以速度快，插件多闻名，但是是收费的，不想付费的话还需要破解。
 3. WebStorm：是Jetbrains公司旗下一款前端开发工具，功能全面又强大，但是也带来了问题：加载慢、容易卡。而且也是收费的，不想付费是需要破解的。
+
 # 二、优势
 1. 轻便：急速打开，不存在卡顿；
 2. 免费：好用的IDE一般都要付费的，不付费也需要破解。而VS Code免费而且支持Windows、Mac和Linux；
