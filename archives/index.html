@@ -54,42 +54,35 @@
             <span>
                 <a-icon type="home" theme="filled" />
             </span>
-            <span>home</span>
-        </a>
-        
-        <a href="/about">
-            <span>
-                <a-icon type="idcard" theme="filled" />
-            </span>
-            <span>about</span>
+            <span>主页</span>
         </a>
         
         <a href="/archives">
             <span>
                 <a-icon type="folder" theme="filled" />
             </span>
-            <span>archives</span>
+            <span>归档</span>
         </a>
         
-        <a href="/like/categories">
+        <a href="/categories">
             <span>
                 <a-icon type="book" theme="filled" />
             </span>
-            <span>categories</span>
+            <span>分类</span>
         </a>
         
-        <a href="/like/tags">
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于</span>
+        </a>
+        
+        <a href="/tags">
             <span>
                 <a-icon type="tags" theme="filled" />
             </span>
             <span>tags</span>
-        </a>
-        
-        <a target="_blank" rel="noopener" href="https://en.korilin.com">
-            <span>
-                <a-icon type="compass" theme="filled" />
-            </span>
-            <span>英文博客</span>
         </a>
         
     </div>
@@ -108,16 +101,7 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="home" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
-                </div>
-            </a>
-            
-            <a href="/about">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="idcard" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
                 </div>
             </a>
             
@@ -126,34 +110,34 @@
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="folder" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">归档</div>
                 </div>
             </a>
             
-            <a href="/like/categories">
+            <a href="/categories">
                 <div class="item">
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="book" theme="filled" />
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
                 </div>
             </a>
             
-            <a href="/like/tags">
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
                 <div class="item">
                     <div style="min-width:20px; max-width:50px; width: 10%">
                         <a-icon type="tags" theme="filled" />
                     </div>
                     <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
-                </div>
-            </a>
-            
-            <a target="_blank" rel="noopener" href="https://en.korilin.com">
-                <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
-                        <a-icon type="compass" theme="filled" />
-                    </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">英文博客</div>
                 </div>
             </a>
             
@@ -167,6 +151,43 @@
                 <div id="main">
                     
 <div id="archives">
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/22" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/22</div>
+                <a href="/2020/12/22/essay/第一次总是比较重要的/">
+                    <h3>第一次总是比较重要的</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/随笔">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            随笔
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/自己" style=color:#ffa2c4>
+                                自己
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
     
     <a-timeline>
         <a-timeline-item timestamp="2020/12/22" placement="top" color="#a5c2f5">
