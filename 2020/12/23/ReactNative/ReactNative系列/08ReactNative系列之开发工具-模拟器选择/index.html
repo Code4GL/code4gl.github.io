@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="zh ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一修 || 08ReactNative系列之开发工具-模拟器选择</title>
+    <meta name="author" content="一修">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">一修</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>归档</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>一修</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">归档</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>08ReactNative系列之开发工具-模拟器选择 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/12/23
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/ReactNative系列">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                ReactNative系列
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ReactNative" style=color:#ff7d73>
+                    ReactNative
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/混合App" style=color:#ff7d73>
+                    混合App
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p><img src="https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ReactNative.jpg"></p>
+<h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>其实对于模拟器选择，只是针对Android而言。因为IOS的模拟器就在XCode里面，也只能用它。<br>Android模拟器主要分三种：AVD、Genymotion和游戏模拟器。第一种是之前讲过的Android SDK Manager自带的；第二种是国外的一款专门开发使用的模拟器；第三种就是市场上玩游戏的Android模拟器。第一种太卡，第三种版本太少，适合业余开发使用的。所以<code>推荐</code>第二种Genymotion。</p>
+<h2 id="二、AVD"><a href="#二、AVD" class="headerlink" title="二、AVD"></a>二、AVD</h2><p>AVD的全称为：Android Virtual Device，就是Android运行的虚拟设备，他是Android的模拟器识别。建立的Android要运行，必须创建AVD，每个AVD上可以配置很多的运行项目。<br>它是由Android SDK Manager安装时候自带安装的，不需要额外安装，不过使用起来体验相当不好，不推荐使用。</p>
+<h2 id="三、Genymotion（推荐）"><a href="#三、Genymotion（推荐）" class="headerlink" title="三、Genymotion（推荐）"></a>三、Genymotion（推荐）</h2><p>Genymotion是一款专业Android的模拟器，支持Windows、Linux和Mac OS等操作系统。相对AVD来讲，速度要快得多。</p>
+<h3 id="3-1下载安装"><a href="#3-1下载安装" class="headerlink" title="3.1下载安装"></a>3.1下载安装</h3><p>点击连接进入官网，下载之前需要注册，这个注册是必须的，因为后面使用时也是需要这个帐号登录的。中文官网地址：<a target="_blank" rel="noopener" href="http://www.genymotion.net/">Genymotion</a>。<br>进入之后，点击“注册”。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-525e9e2ff278333a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>然后跳转到登录页面，点击“Create an account”创建帐号。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-64b93f2dcb9efe2d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>然后就开始填写信息。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-b25043d5b02bfa2f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>账号注册好了，登录成功后，会出现以下页面。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-187fec64c220449b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>温馨提示：不要点击中间的下载按钮，这个下载是下载通用版本。Genymotion有一个个人版本是免费的，我们主要使用个人版本。和其他公司一样，个人免费版本总是需要寻找一番。</p>
+</blockquote>
+<p>点击右上角的下载之后，进入以下页面。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-35af79fd8424cf4a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>页面继续往下拉，会看到<code>Get Genymotion personal version</code>，这个才是个人版本。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-873af972b9f7631d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>点击之后，进入如下页面。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-6eb7f80302a44962.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>此时才真正进入下载页面。中间展示的是和当前系统匹配的版本，下面是其他系统的版本。根据自己系统选择对应的版本下载即可。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-768236cb565e00f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>需要注意的是，有两个版本可以选择：带Virtualbox和不带Virtualbox。第一次安装选择带Virtualbox版本。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-9f7e8731998b1295.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>VirtualBox 是一款开源虚拟机软件。VirtualBox 是由德国 Innotek 公司开发，由Sun Microsystems公司出品的软件，使用Qt编写，在 Sun 被 Oracle 收购后正式更名成 Oracle VM VirtualBox。模拟器的启动需要虚拟机的支持。</p>
+</blockquote>
+<p>下载完成之后安装即可，安装没有什么要注意的。</p>
+<h3 id="3-2创建模拟器"><a href="#3-2创建模拟器" class="headerlink" title="3.2创建模拟器"></a>3.2创建模拟器</h3><p>安装完成之后，会进入下面这个界面，选择是否新建一个虚拟机。选择之前需要注意一下，新建过程非常非常非常慢，如果暂时不需要可以后面选择“add”在新建。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-ed310addc377d918.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>首次创建会提示要登录，帐号就是刚才下载时注册的帐号，登录即可。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-47c736e157c1d024.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>登录之后，就可以选择Android版本以及手机型号。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-75040177e8677589.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>选择一种之后就进入安装界面。考验网速的时候到了，如果对自己网速不自信，可以在网上找已经安装好的ova文件，下载下来导入也是一种不错的选择。下载地址：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/rainboy2010/p/6387770.html">https://www.cnblogs.com/rainboy2010/p/6387770.html</a>。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-3c132eab9f1bd1e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>创建完成之后，选择一种点击“start”即可，VirtualBox会自动启动。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-c71f4c7389980314.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>启动完成后，就出现了安卓模拟器的样子。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-2a3118754e3ff1dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<blockquote>
+<p>温馨提示：首次启动，若计算机虚拟机功能没有开启，需要进入bios界面手动开启，将<code>Virtualization Technology</code>设为<code>enabled</code>即可。</p>
+</blockquote>
+<h2 id="四、游戏模拟器"><a href="#四、游戏模拟器" class="headerlink" title="四、游戏模拟器"></a>四、游戏模拟器</h2><p>游戏模拟器，顾名思义是专门玩游戏用的，所以他的性能非常好。但是Android的版本太少，有的甚至只有一种，所以只能用于业余开发。常见模拟器及其端口号：</p>
+<ol>
+<li>夜神安卓模拟器：<code>62001</code></li>
+<li>逍遥安卓模拟器：<code>21503</code></li>
+<li>蓝叠安卓模拟器：<code>5555</code></li>
+<li>雷电安卓模拟器：<code>5555</code></li>
+<li>天天安卓模拟器：<code>5037</code></li>
+<li>网易MuMu模拟器：<code>7555</code></li>
+<li>安卓模拟器大师：<code>54001</code></li>
+<li>Genymotion：<code>5555</code></li>
+</ol>
+<p><strong>欢迎大佬纠错指导，欢迎交流学习。</strong></p>
+<blockquote>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/Code4GL">https://github.com/Code4GL</a><br>公众号：code_everything<br>QQ：771841496<br>邮箱：<a href="mailto:&#103;&#x75;&#97;&#110;&#x6c;&#105;&#49;&#57;&#57;&#49;&#64;&#49;&#54;&#x33;&#x2e;&#x63;&#111;&#x6d;">&#103;&#x75;&#97;&#110;&#x6c;&#105;&#49;&#57;&#57;&#49;&#64;&#49;&#54;&#x33;&#x2e;&#x63;&#111;&#x6d;</a></p>
+</blockquote>
+<p><img src="/images/code_everything.jpg" alt="code_everything"></p>
+
+    </div>
+
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2018 - 2020 一修
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @一修
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>

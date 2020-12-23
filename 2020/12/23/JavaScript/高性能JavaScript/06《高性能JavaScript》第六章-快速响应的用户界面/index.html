@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html lang="zh ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一修 || 06《高性能JavaScript》第六章 快速响应的用户界面</title>
+    <meta name="author" content="一修">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">一修</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>归档</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>一修</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">归档</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>06《高性能JavaScript》第六章 快速响应的用户界面 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/12/23
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/JavaScript">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                JavaScript
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/高性能JavaScript" style=color:#03a9f4>
+                    高性能JavaScript
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/原生JS" style=color:#ff7d73>
+                    原生JS
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p><img src="https://upload-images.jianshu.io/upload_images/18236822-ed739b07cf9eed5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h2 id="6-1-浏览器UI线程"><a href="#6-1-浏览器UI线程" class="headerlink" title="6.1 浏览器UI线程"></a>6.1 浏览器UI线程</h2><p>浏览器UI线程：用于执行JavaScript和更新用户界面的进程。UI线程的工作基于一个简单的队列系统，任务会被保存到队列中直到进程空闲。</p>
+<pre><code class="html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Browser UI Thread Example&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;button onclick=&quot;handleClick()&quot;&gt;Click Me&lt;/button&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+            function handleClick()&#123;
+                var div = document.createElement(&quot;div&quot;);
+                div.innerHTML = &quot;Clicked!&quot;;
+                document.body.appendChild(div);
+            &#125;
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p><img src="https://upload-images.jianshu.io/upload_images/18236822-33b7154924cc7ebf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="UI线程处理流程"></p>
+<h3 id="6-1-1-浏览器限制"><a href="#6-1-1-浏览器限制" class="headerlink" title="6.1.1 浏览器限制"></a>6.1.1 浏览器限制</h3><p>浏览器限制了JavaScript任务的运行时间，它确保某些恶意代码不能通过永不停止的密集操作锁住用户的浏览器或计算机。此类限制分为两种：调用栈大小限制（第四章讨论过）和长时间运行脚本限制。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/18236822-774e70f3cc68fa7d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="运行超过500万条语句时，IE警告对话框"></p>
+<p>对于不同浏览器限制也不一样：</p>
+<ol>
+<li>IE：默认500万条语句；</li>
+<li>Firefox：默认限制10秒；</li>
+<li>Safari：默认限制5秒；</li>
+<li>Chrome：没有单独限制，替代做法是依赖其通用崩溃检测系统来处理；</li>
+<li>Opera：没有限制，鉴于Opera架构，运行结束时不会导致系统不稳定。</li>
+</ol>
+<h3 id="6-1-2-多久才算太久"><a href="#6-1-2-多久才算太久" class="headerlink" title="6.1.2 多久才算太久"></a>6.1.2 多久才算太久</h3><p>单个JavaScript操作花费的总时间不应该超过<code>100毫秒</code>。这个数字源自Robert Miller在1968年的研究。如果页面响应超过<code>100毫秒</code>，用户会感到自已与界面失去联系。因此，限制所有的JavaScript任务在<code>100毫秒</code>或更短的时间内完成，才能给用户一个连续的体验。</p>
+<h2 id="6-2-使用定时器让出时间片段"><a href="#6-2-使用定时器让出时间片段" class="headerlink" title="6.2 使用定时器让出时间片段"></a>6.2 使用定时器让出时间片段</h2><p>尽管尽了最大努力，有时也难免出现复杂的JavaScript任务不能在100毫秒内完成。这时候，最理想的做法是让出UI线程的控制权，使得UI可以更新。</p>
+<h3 id="6-2-1-定时器基础"><a href="#6-2-1-定时器基础" class="headerlink" title="6.2.1 定时器基础"></a>6.2.1 定时器基础</h3><p>在JavaScript中可以使用<code>setTimeout()</code>和<code>setInterval()</code>创建定时器。定时器和UI线程的交互方式有助于把运行耗时较长的脚本拆分为较短的片段。</p>
+<blockquote>
+<p>注意：定时器传入的时间参数表示任务被添加到UI线程的时间，而不是一定会在这段时间后执行，它会在队列中等待其他前面所有任务执行完毕才会执行。</p>
+</blockquote>
+<pre><code class="JavaScript">var button = document.getElementById(&quot;my-button&quot;);
+button.onclick = function()&#123;
+    oneMethod();
+    setTimeout(function()&#123;
+        document.getElementById(&quot;notice&quot;).style.color = &quot;red&quot;;
+    &#125;, 250);
+&#125;;</code></pre>
+<p><img src="https://upload-images.jianshu.io/upload_images/18236822-2884cddde6910f94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="250秒后加入队列"></p>
+<blockquote>
+<p>注意：定时器代码只有在创建它的函数执行完成之后，才有可能被执行。</p>
+</blockquote>
+<pre><code class="JavaScript">var button = document.getElementById(&quot;my-button&quot;);
+button.onclick = function()&#123;
+    oneMethod();
+    setTimeout(function()&#123;
+        document.getElementById(&quot;notice&quot;).style.color = &quot;red&quot;;
+    &#125;, 50); 
+    anotherMethod();
+&#125;;</code></pre>
+<p><img src="https://upload-images.jianshu.io/upload_images/18236822-9b44ec9ed569cc79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="定时器中代码耗时超过设定时间50秒"></p>
+<h3 id="6-2-2-定时器的精度"><a href="#6-2-2-定时器的精度" class="headerlink" title="6.2.2 定时器的精度"></a>6.2.2 定时器的精度</h3><p>JavaScript定时器的延迟通常不太精准，相差大约几毫秒。正因为如此，定时器不能用于测量实际时间。设置定时器延迟小于<code>15毫秒</code>会导致IE锁定，所以延迟的最小值建议设为<code>25毫秒</code>，以确保至少有15毫秒延迟。</p>
+<h3 id="6-2-3-使用定时器处理数组"><a href="#6-2-3-使用定时器处理数组" class="headerlink" title="6.2.3 使用定时器处理数组"></a>6.2.3 使用定时器处理数组</h3><p>在之前讨论的循环优化技术使用后，还不能满足性能要求的时候，下一步优化就是选用定时器。它的基本方法是把循环工作分解到一系列定时器中。<br>是否可以用定时器取代循环的两个决定性因素：</p>
+<ol>
+<li>处理过程是否必须同步？</li>
+<li>数据是否必须按顺序处理？<br>如果这两个答案都是：<code>否</code>，那么代码将适用于定时器分解任务。</li>
+</ol>
+<pre><code class="JavaScript">function processArray(items, process, callback)&#123;
+    var todo = items.concat(); // 克隆原数组
+    setTimeout(function()&#123;
+    process(todo.shift()); // 取得数组的下一个元素并进行处理
+    if (todo.length &gt; 0)&#123; // 如果还有需要处理的元素，创建新的定时器
+        setTimeout(arguments.callee, 25); // arguments.callee该值指向当前运行的匿名函数
+    &#125; else &#123;
+        callback(items);
+    &#125;
+    &#125;, 25);
+&#125;</code></pre>
+<pre><code class="JavaScript">// 使用
+var items = [123, 789, 323, 778, 232, 654, 219, 543, 321, 160];
+function outputValue(value)&#123;
+    console.log(value);
+&#125;
+processArray(items, outputValue, function()&#123;
+    console.log(&quot;Done!&quot;);
+&#125;);</code></pre>
+<blockquote>
+<p>注意：使用定时器的副作用是处理数组的总时长增加了，但为了避免锁定浏览器给用户带来不好的体验，这种取舍是必要的。</p>
+</blockquote>
+<h3 id="6-2-4-分割任务"><a href="#6-2-4-分割任务" class="headerlink" title="6.2.4 分割任务"></a>6.2.4 分割任务</h3><p>我们通常会把一个复杂的任务分解成一系列子任务。</p>
+<pre><code class="JavaScript">function saveDocument(id)&#123;
+    // 保存文档
+    openDocument(id)
+    writeText(id);
+    closeDocument(id);
+    // 将成功信息更新至页面
+    updateUI(id);
+&#125;</code></pre>
+<pre><code class="JavaScript">function multistep(steps, args, callback)&#123;
+    var tasks = steps.concat(); // 克隆数组
+    setTimeout(function()&#123;
+        // 执行下一个任务
+        var task = tasks.shift();
+        task.apply(null, args || []);
+        // 检查是否还有其他任务 
+        if (tasks.length &gt; 0)&#123;
+            setTimeout(arguments.callee, 25);
+        &#125; else &#123;
+            callback();
+        &#125;
+    &#125;, 25);
+&#125;</code></pre>
+<pre><code class="JavaScript">// 使用
+function saveDocument(id)&#123;
+    var tasks = [openDocument, writeText, closeDocument, updateUI];
+    multistep(tasks, [id], function()&#123;
+        alert(&quot;Save completed!&quot;);
+    &#125;);
+&#125;</code></pre>
+<h3 id="6-2-5-记录代码运行时间"><a href="#6-2-5-记录代码运行时间" class="headerlink" title="6.2.5 记录代码运行时间"></a>6.2.5 记录代码运行时间</h3><p>有时每次只执行一个任务的效率不高。如果每次定时器只处理一项，且每项之间产生25毫秒的延迟，这对性能来说是个浪费。如果每个定时器能批处理多个任务，那么效率就上来了。<br>还记得前面讨论过JavaScript连续运行100毫秒，不会影响用户体验。建议把这个数字减半，不让JavaScript代码持续运行<code>50毫秒</code>，这样确保代码永远不会影响用户体验。</p>
+<pre><code class="JavaScript">function timedProcessArray(items, process, callback)&#123;
+    var todo = items.concat(); // 克隆原始数组
+    setTimeout(function()&#123;
+        var start = +new Date(); // +可以把Date转换成数字，方便计算
+        do &#123;
+            process(todo.shift());
+        &#125; while (todo.length &gt; 0 &amp;&amp; (+new Date() - start &lt; 50));
+        if (todo.length &gt; 0)&#123;
+            setTimeout(arguments.callee, 25);
+        &#125; else &#123;
+            callback(items);
+        &#125; 
+    &#125;, 25);
+&#125;</code></pre>
+<p>该函数增加了一个<code>do-while</code>循环，保证一个定时器里任务总耗时不超过50毫秒，既增加了效率有不影响用户体验。</p>
+<h3 id="6-2-6-定时器与性能"><a href="#6-2-6-定时器与性能" class="headerlink" title="6.2.6 定时器与性能"></a>6.2.6 定时器与性能</h3><p>定时器会让JavaScript的代码整体性能发生翻天覆地的变化，但过度使用也会对性能造成负面影响。保证同一时间只有一个定时器存在，才能避免定时器导致的性能问题。</p>
+<h2 id="6-3-Web-Workers"><a href="#6-3-Web-Workers" class="headerlink" title="6.3 Web Workers"></a>6.3 Web Workers</h2><p>自JavaScript诞生以来，还没有办法在浏览器UI线程外运行代码。Web Workers改变了这一状况，它引入了一个接口，能使代码运行且不占用浏览器UI线程时间。</p>
+<h3 id="6-3-1-Worker运行环境"><a href="#6-3-1-Worker运行环境" class="headerlink" title="6.3.1 Worker运行环境"></a>6.3.1 Worker运行环境</h3><p>由于Web Workers没有绑定UI线程，意味着它们不能访问浏览器的许多资源。Web Workers从外部线程中修改DOM会导致用户界面出现错误，但是每个Web Worker都有自己的全局运行环境：</p>
+<ol>
+<li>一个<code>navigator</code>对象，只包含四个属性：appName,appVersion,userAgent,和platform；</li>
+<li>一个<code>location</code>对象（和window里的一样，只是所有属性都是只读的）；</li>
+<li>一个<code>self</code>对象指向全局worker对象；</li>
+<li>一个<code>importScripts()</code>方法，使工人线程可以加载外部 JavaScript 文件；</li>
+<li>所有<code>ECMAScript</code>对象，诸如Object，Array，Data，等等；</li>
+<li><code>XMLHttpRequest</code>构造器；</li>
+<li><code>setTimeout()</code>和<code>setInterval()</code>方法；</li>
+<li><code>close()</code>方法可立即Worker运行。</li>
+</ol>
+<p>由于Web Workers有着不同的全局运行环境，因此无法从JavaScript代码中创建。需要创建一个完全独立的JavaScript文件，包含了需要在Worker中运行的代码。然后引入这个文件：</p>
+<pre><code class="JavaScript">var worker = new Worker(&quot;code.js&quot;);</code></pre>
+<p>此代码一旦执行，将为这个文件创建一个新的线程和一个新的Worker运行环境。该文件会被异步下载，直到文件下载并执行完成后才会启动Worker。</p>
+<h3 id="6-3-2-与Worker通信"><a href="#6-3-2-与Worker通信" class="headerlink" title="6.3.2 与Worker通信"></a>6.3.2 与Worker通信</h3><p>Worker与网页代码通过事件接口进行通信。网页代码通过<code>postMessage()</code>方法给Worker传递数据；Worker有一个<code>onmessage</code>事件处理器接收信息，并可以用自己的<code>postMessage()</code>方法把数据传回网页代码。</p>
+<pre><code class="JavaScript">// 网页代码
+var worker = new Worker(&quot;code.js&quot;);
+worker.onmessage = function(event)&#123;
+    alert(event.data);
+&#125;;
+worker.postMessage(&quot;Nicholas&quot;);</code></pre>
+<pre><code class="JavaScript">// code.js内部代码
+self.onmessage = function(event)&#123;
+    self.postMessage(&quot;Hello, &quot; + event.data + &quot;!&quot;);
+&#125;;</code></pre>
+<blockquote>
+<p>注意：消息系统是网页和Worker通信的唯一途径。</p>
+</blockquote>
+<h3 id="6-3-3-加载外部文件"><a href="#6-3-3-加载外部文件" class="headerlink" title="6.3.3 加载外部文件"></a>6.3.3 加载外部文件</h3><p>Worker通过<code>importScripts()</code>方法加载外部JavaScript文件，该方法接收一个或多个JavaScript文件URL作为参数。</p>
+<pre><code class="JavaScript">// code.js内部代码
+importScripts(&quot;file1.js&quot;, &quot;file2.js&quot;);
+self.onmessage = function(event)&#123;
+    self.postMessage(&quot;Hello, &quot; + event.data + &quot;!&quot;);
+&#125;;</code></pre>
+<h3 id="6-3-4-实际应用"><a href="#6-3-4-实际应用" class="headerlink" title="6.3.4 实际应用"></a>6.3.4 实际应用</h3><p>Web Workers适用于哪些处理纯数据，或者与浏览器UI无关的长时间运行脚本。比如：</p>
+<ol>
+<li>编码/解码大字符串；</li>
+<li>复杂数学运算（包括图像或视频处理）；</li>
+<li>大数组排序。</li>
+</ol>
+<blockquote>
+<p>性能优化：任何超过100毫秒的处理过程，都应考虑Worker方案而不是定时器方案。前提是浏览器支持Web Workers。</p>
+</blockquote>
+<p><strong>欢迎大佬纠错指导，欢迎交流学习。</strong></p>
+<blockquote>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/Code4GL">https://github.com/Code4GL</a><br>公众号：code_everything<br>QQ：771841496<br>邮箱：<a href="mailto:&#103;&#117;&#97;&#x6e;&#x6c;&#x69;&#x31;&#x39;&#x39;&#49;&#x40;&#x31;&#54;&#51;&#x2e;&#99;&#111;&#x6d;">&#103;&#117;&#97;&#x6e;&#x6c;&#x69;&#x31;&#x39;&#x39;&#49;&#x40;&#x31;&#54;&#51;&#x2e;&#99;&#111;&#x6d;</a></p>
+</blockquote>
+<p><img src="/images/code_everything.jpg" alt="code_everything"></p>
+
+    </div>
+
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2018 - 2020 一修
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @一修
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>

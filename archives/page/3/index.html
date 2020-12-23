@@ -1,0 +1,1411 @@
+
+<!DOCTYPE html>
+<html lang="zh ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一修 || 念念不忘，必有回响！</title>
+    <meta name="author" content="一修">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">一修</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>归档</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>一修</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">归档</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                    
+<div id="archives">
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/JavaScript/高性能JavaScript/12JavaScript性能优化汇总/">
+                    <h3>12JavaScript性能优化汇总</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/JavaScript">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            JavaScript
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/高性能JavaScript" style=color:#00bcd4>
+                                高性能JavaScript
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/原生JS" style=color:#03a9f4>
+                                原生JS
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/JavaScript/高性能JavaScript/11《高性能JavaScript》第十章-工具/">
+                    <h3>11《高性能JavaScript》第十章 工具</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/JavaScript">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            JavaScript
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/高性能JavaScript" style=color:#00bcd4>
+                                高性能JavaScript
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/原生JS" style=color:#ffa2c4>
+                                原生JS
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/JavaScript/高性能JavaScript/10《高性能JavaScript》第九章-构建并部署高性能JavaScript应用/">
+                    <h3>10《高性能JavaScript》第九章 构建并部署高性能JavaScript应用</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/JavaScript">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            JavaScript
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/高性能JavaScript" style=color:#ffa2c4>
+                                高性能JavaScript
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/原生JS" style=color:#00bcd4>
+                                原生JS
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/JavaScript/高性能JavaScript/09《高性能JavaScript》第八章-编程实践/">
+                    <h3>09《高性能JavaScript》第八章 编程实践</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/JavaScript">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            JavaScript
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/高性能JavaScript" style=color:#ff7d73>
+                                高性能JavaScript
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/原生JS" style=color:#ff7d73>
+                                原生JS
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/JavaScript/高性能JavaScript/08《高性能JavaScript》第七章-Ajax/">
+                    <h3>08《高性能JavaScript》第七章 Ajax</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/JavaScript">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            JavaScript
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/高性能JavaScript" style=color:#00a596>
+                                高性能JavaScript
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/原生JS" style=color:#00bcd4>
+                                原生JS
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/JavaScript/高性能JavaScript/07《高性能JavaScript》第六章-快速响应的用户界面/">
+                    <h3>07《高性能JavaScript》第六章 快速响应的用户界面</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/JavaScript">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            JavaScript
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/高性能JavaScript" style=color:#03a9f4>
+                                高性能JavaScript
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/原生JS" style=color:#ffa2c4>
+                                原生JS
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/JavaScript/高性能JavaScript/06《高性能JavaScript》第六章-快速响应的用户界面/">
+                    <h3>06《高性能JavaScript》第六章 快速响应的用户界面</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/JavaScript">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            JavaScript
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/高性能JavaScript" style=color:#00bcd4>
+                                高性能JavaScript
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/原生JS" style=color:#00a596>
+                                原生JS
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/JavaScript/高性能JavaScript/05《高性能JavaScript》第五章-字符串和正则表达式/">
+                    <h3>05《高性能JavaScript》第五章 字符串和正则表达式</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/JavaScript">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            JavaScript
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/高性能JavaScript" style=color:#03a9f4>
+                                高性能JavaScript
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/原生JS" style=color:#00bcd4>
+                                原生JS
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/JavaScript/高性能JavaScript/04《高性能JavaScript》第四章-算法和流程控制/">
+                    <h3>04《高性能JavaScript》第四章 算法和流程控制</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/JavaScript">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            JavaScript
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/高性能JavaScript" style=color:#03a9f4>
+                                高性能JavaScript
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/原生JS" style=color:#03a9f4>
+                                原生JS
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/JavaScript/高性能JavaScript/03《高性能JavaScript》第三章-DOM编程/">
+                    <h3>03《高性能JavaScript》第三章 DOM编程</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/JavaScript">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            JavaScript
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/高性能JavaScript" style=color:#03a9f4>
+                                高性能JavaScript
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/原生JS" style=color:#00a596>
+                                原生JS
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/JavaScript/高性能JavaScript/02《高性能JavaScript》第二章 数据存取/">
+                    <h3>02高性能JavaScript》第二章 数据存取</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/JavaScript">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            JavaScript
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/高性能JavaScript" style=color:#00a596>
+                                高性能JavaScript
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/原生JS" style=color:#00bcd4>
+                                原生JS
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/JavaScript/高性能JavaScript/01《高性能JavaScript》第一章 加载和执行/">
+                    <h3>01《高性能JavaScript》第一章 加载和执行</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/JavaScript">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            JavaScript
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/高性能JavaScript" style=color:#00bcd4>
+                                高性能JavaScript
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/原生JS" style=color:#ffa2c4>
+                                原生JS
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/ReactNative/ReactNative系列/14ReactNative系列之版本更新策略/">
+                    <h3>14ReactNative系列之版本更新策略</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/ReactNative系列">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            ReactNative系列
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/ReactNative" style=color:#00a596>
+                                ReactNative
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/混合App" style=color:#00a596>
+                                混合App
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/ReactNative/ReactNative系列/13ReactNative系列之安全策略/">
+                    <h3>13ReactNative系列之安全策略</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/ReactNative系列">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            ReactNative系列
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/ReactNative" style=color:#00a596>
+                                ReactNative
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/混合App" style=color:#00bcd4>
+                                混合App
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/ReactNative/ReactNative系列/12ReactNative系列之App功能点汇总/">
+                    <h3>12ReactNative系列之App功能点汇总</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/ReactNative系列">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            ReactNative系列
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/ReactNative" style=color:#03a9f4>
+                                ReactNative
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/混合App" style=color:#03a9f4>
+                                混合App
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/ReactNative/ReactNative系列/11ReactNative系列之react-navigation路由嵌套/">
+                    <h3>11ReactNative系列之react-navigation路由嵌套</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/ReactNative系列">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            ReactNative系列
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/ReactNative" style=color:#ff7d73>
+                                ReactNative
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/混合App" style=color:#ff7d73>
+                                混合App
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/ReactNative/ReactNative系列/10ReactNative系列之react-native生命周期/">
+                    <h3>10ReactNative系列之react-native生命周期</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/ReactNative系列">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            ReactNative系列
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/ReactNative" style=color:#00bcd4>
+                                ReactNative
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/混合App" style=color:#ff7d73>
+                                混合App
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/ReactNative/ReactNative系列/09ReactNative系列之第一个RN项目/">
+                    <h3>09ReactNative系列之第一个RN项目</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/ReactNative系列">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            ReactNative系列
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/ReactNative" style=color:#03a9f4>
+                                ReactNative
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/混合App" style=color:#ffa2c4>
+                                混合App
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/ReactNative/ReactNative系列/08ReactNative系列之开发工具-模拟器选择/">
+                    <h3>08ReactNative系列之开发工具-模拟器选择</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/ReactNative系列">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            ReactNative系列
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/ReactNative" style=color:#ff7d73>
+                                ReactNative
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/混合App" style=color:#00bcd4>
+                                混合App
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/ReactNative/ReactNative系列/07ReactNative系列之开发工具-IDE选择/">
+                    <h3>07ReactNative系列之开发工具-IDE选择</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/ReactNative系列">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            ReactNative系列
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/ReactNative" style=color:#ff7d73>
+                                ReactNative
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/混合App" style=color:#00bcd4>
+                                混合App
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/ReactNative/ReactNative系列/06ReactNative系列之Mac环境搭建-Android环境/">
+                    <h3>06ReactNative系列之Mac环境搭建-Android环境</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/ReactNative系列">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            ReactNative系列
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/ReactNative" style=color:#ff7d73>
+                                ReactNative
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/混合App" style=color:#03a9f4>
+                                混合App
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/ReactNative/ReactNative系列/05ReactNative系列之Mac环境搭建-IOS环境/">
+                    <h3>05ReactNative系列之Mac环境搭建-IOS环境</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/ReactNative系列">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            ReactNative系列
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/ReactNative" style=color:#ff7d73>
+                                ReactNative
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/混合App" style=color:#00a596>
+                                混合App
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/ReactNative/ReactNative系列/04ReactNative系列之Windows环境搭建-Git环境/">
+                    <h3>04ReactNative系列之Windows环境搭建-Git环境</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/ReactNative系列">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            ReactNative系列
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/ReactNative" style=color:#00a596>
+                                ReactNative
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/混合App" style=color:#03a9f4>
+                                混合App
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/ReactNative/ReactNative系列/03ReactNative系列之Windows环境搭建-Node环境/">
+                    <h3>03ReactNative系列之Windows环境搭建-Node环境</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/ReactNative系列">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            ReactNative系列
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/ReactNative" style=color:#00a596>
+                                ReactNative
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/混合App" style=color:#03a9f4>
+                                混合App
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/ReactNative/ReactNative系列/02ReactNative系列之Windows环境搭建-Android环境/">
+                    <h3>02ReactNative系列之Windows环境搭建-Android环境</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/ReactNative系列">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            ReactNative系列
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/ReactNative" style=color:#03a9f4>
+                                ReactNative
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/混合App" style=color:#ff7d73>
+                                混合App
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/23" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/23</div>
+                <a href="/2020/12/23/ReactNative/ReactNative系列/01ReactNative系列之Windows环境搭建-Java环境/">
+                    <h3>01ReactNative系列之Windows环境搭建-Java环境</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/ReactNative系列">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            ReactNative系列
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/ReactNative" style=color:#03a9f4>
+                                ReactNative
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/混合App" style=color:#03a9f4>
+                                混合App
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/12/22" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/12/22</div>
+                <a href="/2020/12/22/essay/第一次总是比较重要的/">
+                    <h3>第一次总是比较重要的</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/随笔">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            随笔
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/自己" style=color:#03a9f4>
+                                自己
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/生活" style=color:#03a9f4>
+                                生活
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+</div>
+
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2018 - 2020 一修
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @一修
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>

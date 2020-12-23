@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="zh ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一修 || 03ReactNative系列之Windows环境搭建-Node环境</title>
+    <meta name="author" content="一修">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">一修</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>归档</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>一修</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">归档</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>03ReactNative系列之Windows环境搭建-Node环境 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/12/23
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/ReactNative系列">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                ReactNative系列
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ReactNative" style=color:#ff7d73>
+                    ReactNative
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/混合App" style=color:#ffa2c4>
+                    混合App
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p><img src="https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ReactNative.jpg"></p>
+<h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>Node是一个让JavaScript运行在服务端的开发平台，它让JavaScript成为与PHP、Python、Perl、Ruby 等服务端语言平起平坐的脚本语言。发布于2009年5月，由Ryan Dahl开发，实质是对Chrome V8引擎进行了封装。同样，RN开发主要也是基于JavaScript编码，所以Node环境也是必不可少的。</p>
+<h2 id="二、下载安装"><a href="#二、下载安装" class="headerlink" title="二、下载安装"></a>二、下载安装</h2><p>RN官网教程是利用Chocolatey来安装，这是一个Windows上的软件管理器，可以下载Windows上的很多软件，但是对于Windows用户来说，下载软件通常都是在官网下载，而很少使用命令行来下载，所以不推荐使用。下面是提供两个网址来下载，第一个是Node的官方网站，第二个是Node的中文网站。对于没有使用科学上网工具的同志请选择国内的中文网站下载。<a target="_blank" rel="noopener" href="https://nodejs.org/en/">英文官网</a>和<a target="_blank" rel="noopener" href="http://nodejs.cn/download/">中文官网</a>。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-204fba1d2eb3b065.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>下载长期支持版本，最新版本可能会不稳定。对于安装没有什么特别注意的，主要是选择好安装路径以及是否要添加到环境变量中，此时要选择添加，否则后面需要自己手动配置。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-50ea338e909693ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h2 id="三、安装成功验证"><a href="#三、安装成功验证" class="headerlink" title="三、安装成功验证"></a>三、安装成功验证</h2><p>使用win+R，输入“cmd”打开dos命令行，键入“node -v”如图显示对应的版本号，即安装成功。若未成功请查看是否配置好了环境变量。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-d7570c4693302aec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h2 id="四、Npm"><a href="#四、Npm" class="headerlink" title="四、Npm"></a>四、Npm</h2><p>npm全称为“Node Package Manager”。顾名思义，这是Node自带的依赖包管理器。主要功能就是管理Node依赖，包括安装、卸载、更新、查看等。做过后端的同志可能会明白，这类似后端中的jar包。Npm是跟随Node同时安装在电脑上的，在安装好Node之后，可以在dos中键入“npm -v”查看当前npm版本。<br><img src="https://upload-images.jianshu.io/upload_images/18236822-4c49e5783b8d9c55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h2 id="五、Yarn（推荐）"><a href="#五、Yarn（推荐）" class="headerlink" title="五、Yarn（推荐）"></a>五、Yarn（推荐）</h2><p>Apache Hadoop YARN（Yet Another Resource Negotiator，另一种资源协调者）是一种新的Hadoop资源管理器，它是一个通用资源管理系统，可为上层应用提供统一的资源管理和调度，它的引入为集群在利用率、资源统一管理和数据共享等方面带来了巨大好处。<a target="_blank" rel="noopener" href="https://yarn.bootcss.com/">官网</a><br>对于Node的亲儿子Npm来说，Yarn最明显的优点：</p>
+<ol>
+<li>离线模式<br>yarn有个缓存目录，在安装依赖的同时，会将依赖放入缓存中，下次安装时直接从缓存中读取，避免的不必要的网络请求，大大提高了效率。</li>
+<li>并行执行<br>npm会等一个包完全安装完才会跳到下一个包，但yarn会并行执行包，因此速度会快很多。yarn在速度方面优势明显。</li>
+<li>版本锁定<br>npm在包的依赖层次比较深时，版本控制不够好。会出现相同package.json，不同人的电脑上安装出不同版本的依赖包。</li>
+</ol>
+<blockquote>
+<p>下载安装：对于Windows环境下，可以有两种方法下载，即下载msi安装文件和npm使用命令来安装。但是推荐使用npm来安装，因为后期依赖的管理都是通过命令行来管理，这里就可以提前熟悉，前提是具有Node环境。<br>在具有Node环境后，打开dos键入“npm install yarn -g”回车，等待安装完成。完成之后就可以通过命令“yarn –version”或者“yarn -v”来查看Yarn版本，若正常显示版本号则说明安装成功。</p>
+</blockquote>
+<h2 id="六、国内镜像仓库"><a href="#六、国内镜像仓库" class="headerlink" title="六、国内镜像仓库"></a>六、国内镜像仓库</h2><p>推荐使用淘宝镜像仓库，这里npm和yarn都可以配置。把“npm”改为“yarn”即可为yarn设置国内镜像。</p>
+<pre><code class="terminal">npm config set registry https://registry.npm.taobao.org --global
+npm config set disturl https://npm.taobao.org/dist --global</code></pre>
+<blockquote>
+<p>温馨提示：若在网上下载下来的项目本地运行时，会出现依赖下载失败的情况，这时需要将将镜像去掉，再重新下载。原因可能是镜像仓库中有些依赖未及时更新。此时可将仓库设为<code>npm config set registry https://registry.npmjs.org/ --global</code>即可。使用<code>npm config list</code>命令即可查看相关配置。</p>
+</blockquote>
+<p><strong>欢迎大佬纠错指导，欢迎交流学习。</strong></p>
+<blockquote>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/Code4GL">https://github.com/Code4GL</a><br>公众号：code_everything<br>QQ：771841496<br>邮箱：<a href="mailto:&#103;&#117;&#x61;&#110;&#108;&#105;&#49;&#x39;&#x39;&#49;&#x40;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#117;&#x61;&#110;&#108;&#105;&#49;&#x39;&#x39;&#49;&#x40;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+</blockquote>
+<p><img src="/images/code_everything.jpg" alt="code_everything"></p>
+
+    </div>
+
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2018 - 2020 一修
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @一修
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>
