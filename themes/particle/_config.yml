@@ -1,0 +1,97 @@
+# Theme Github link: https://github.com/korilin/hexo-theme-particle
+# Developer: korilin
+
+# html lang
+language: zh
+
+# avatar image url
+head_img: images/avatar.jpg
+
+# home page head info block
+head_block_enable: true
+
+# home page head background style.
+# If you use a picture as background, you must use the css background-image attribute instead of the background attribute.
+# Use image as background ==> home_background: "background-image:url('../home.jpg')"
+# Use a color as background ==> home_background: "background: balck"
+home_background: "background-image:url('home.jpg')"
+
+# Particle theme icon is adopts the ant design vue icons
+# Link：https://www.antdv.com/components/icon-cn/
+
+# main menu navigation
+menu:
+  主页:
+    icon:
+      name: home
+      theme: filled
+    src: /
+  归档:
+    icon:
+      name: folder
+      theme: filled
+    src: /archives
+  分类:
+    icon:
+      name: book
+      theme: filled
+    src: /categories # 当你的博客root不为 '/'，而是其它时，例如 '/like/'
+  标签:
+    icon:
+      name: tags
+      theme: filled
+    src: /tags
+  关于:
+    icon:
+      name: idcard
+      theme: filled
+    src: /about # 当你的博客root为 '/' 时
+  # 英文博客:
+  #   icon:
+  #     name: compass
+  #     theme: filled
+  #   src: https://en.korilin.com
+
+# side info card
+card:
+  enable: true
+  description: ["念念不忘，必有回响！"]
+  icon_links:
+    github:
+      icon:
+        type: antd-icon
+        name: github
+        theme: filled
+        src:
+      link: https://github.com/Code4GL
+    # twitter:
+    #   icon:
+    #     type: antd-icon
+    #     name: twitter
+    #     theme:
+    #     src:
+    #   link: https://twitter.com/korilin_dev
+  friend_links:
+    Particle主题地址: https://github.com/korilin/hexo-theme-particle
+
+# footer info
+footer:
+  since: 2018
+  # Customize the server domain name ICP
+  ICP:
+    enable: false
+    code: 
+
+# Gitalk
+# https://github.com/gitalk/gitalk
+gitalk:
+  enable: true
+  clientID: # GitHub Application Client ID
+  clientSecret: # GitHub Application Client Secret
+  repo: hexo-theme-particle # The name of repository of store comments
+  owner: korilin # GitHub repo owner
+  admin: korilin # GitHub repo owner and collaborators, only these guys can initialize github issues
+  language: en # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available.
+
+# theme style: full / night / maiden, defalut: full
+style: full
