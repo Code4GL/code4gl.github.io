@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html lang="zh ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一修 || 02Flutter系列之Mac环境搭建</title>
+    <meta name="author" content="一修">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/full-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">一修</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>主页</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>归档</span>
+        </a>
+        
+        <a href="/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>分类</span>
+        </a>
+        
+        <a href="/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>标签</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>关于</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>一修</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">主页</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">归档</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">标签</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">关于</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>02Flutter系列之Mac环境搭建 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/12/23
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/Flutter">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                Flutter
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Flutter系列" style=color:#03a9f4>
+                    Flutter系列
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p><img src="https://upload-images.jianshu.io/upload_images/18236822-921b445577766d10.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h2 id="一、前期工作"><a href="#一、前期工作" class="headerlink" title="一、前期工作"></a>一、前期工作</h2><h3 id="1-1配置仓库镜像"><a href="#1-1配置仓库镜像" class="headerlink" title="1.1配置仓库镜像"></a>1.1配置仓库镜像</h3><p>国内用户首先需要在环境变量中配置镜像地址：</p>
+<pre><code class="config">export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn</code></pre>
+<blockquote>
+<p>注意： 此镜像为临时镜像，并不能保证一直可用，读者可以参考详情请参考<a target="_blank" rel="noopener" href="https://github.com/flutter/flutter/wiki">Using Flutter in China</a> 以获得有关镜像服务器的最新动态。</p>
+</blockquote>
+<h3 id="1-2Flutter下载"><a href="#1-2Flutter下载" class="headerlink" title="1.2Flutter下载"></a>1.2Flutter下载</h3><p><a target="_blank" rel="noopener" href="https://flutter.dev/docs/development/tools/sdk/releases?tab=macos#macos">Flutter下载</a>，下载完成之后需要配置环境变量。环境变量<code>.bash_profile</code>文件参考：</p>
+<pre><code class="config">export PATH=/Users/用户名/Documents/flutter/flutter/bin:$PATH
+export ANDROID_HOME=&quot;/Users/用户名/Documents/android_sdk&quot; //android sdk目录，替换为你自己的即可
+export PATH=$&#123;PATH&#125;:$&#123;ANDROID_HOME&#125;/tools
+export PATH=$&#123;PATH&#125;:$&#123;ANDROID_HOME&#125;/platform-tools
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn</code></pre>
+<h3 id="1-3环境检测"><a href="#1-3环境检测" class="headerlink" title="1.3环境检测"></a>1.3环境检测</h3><p>运行<code>flutter doctor</code>命令查看是否需要安装其它依赖项来完成安装。该命令检查您的环境并在终端窗口中显示报告。Dart SDK已经在捆绑在Flutter里了，没有必要单独安装Dart。 仔细检查命令行输出以获取可能需要安装的其他软件或进一步需要执行的任务（以粗体显示）。</p>
+<blockquote>
+<p>报告主要分五个部分：<br><code>Flutter</code>：是否安装了Flutter；<br><code>Android toolchain</code>：安卓环境工具是否安装完全；<br><code>iOS toolchain</code>：IOS环境工具是否安装完全；<br><code>IDE</code>：开发工具（Android Studio、IntelliJ IDEA、VS Code）；<br><code>Connected device</code>：已链接设备；</p>
+</blockquote>
+<p>这是本人首次运行时检测的问题：</p>
+<pre><code class="text">Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel stable, v1.5.4-hotfix.2, on Mac OS X 10.13.6 17G6030,
+    locale zh-Hans-CN)
+
+[!] Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+    ✗ Android license status unknown.
+      Try re-installing or updating your Android SDK Manager.
+      See https://developer.android.com/studio/#downloads or visit
+      https://flutter.dev/setup/#android-setup for detailed instructions.
+[!] iOS toolchain - develop for iOS devices (Xcode 10.0)
+    ✗ libimobiledevice and ideviceinstaller are not installed. To install with
+      Brew, run:
+        brew update
+        brew install --HEAD usbmuxd
+        brew link usbmuxd
+        brew install --HEAD libimobiledevice
+        brew install ideviceinstaller
+    ✗ ios-deploy not installed. To install:
+        brew install ios-deploy
+    ✗ CocoaPods not installed.
+        CocoaPods is used to retrieve the iOS platform side&#39;s plugin code that responds to your plugin usage on the Dart side.
+        Without resolving iOS dependencies with CocoaPods, plugins will not work
+        on iOS.
+        For more info, see https://flutter.dev/platform-plugins
+      To install:
+        brew install cocoapods
+        pod setup
+[!] Android Studio (not installed)
+[!] IntelliJ IDEA Ultimate Edition (version 2017.3.3)
+    ✗ Flutter plugin not installed; this adds Flutter specific functionality.
+    ✗ Dart plugin not installed; this adds Dart specific functionality.
+[!] VS Code (version 1.35.1)
+    ✗ Flutter extension not installed; install from
+      https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
+[!] Connected device
+    ! No devices available
+
+! Doctor found issues in 6 categories.
+</code></pre>
+<h4 id="1-3-1Android-license-status-unknown"><a href="#1-3-1Android-license-status-unknown" class="headerlink" title="1.3.1Android license status unknown"></a>1.3.1Android license status unknown</h4><p>运行<code>flutter doctor --android-licenses</code>：</p>
+<pre><code class="config">A newer version of the Android SDK is required. To update, run:
+/Users/xxx/soft/AndroidSDK/tools/bin/sdkmanager --update</code></pre>
+<p>根据提示运行：<code>/Users/xxx/soft/AndroidSDK/tools/bin/sdkmanager --update</code>。拼网速的时候到了，有时候运行命令后没进入此状态，请重新运行几次。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/18236822-dcc61db332e896cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>下载安装完成之后，在此运行<code>flutter doctor --android-licenses</code>，会出现各种协议需要同意，一路输入<code>y</code>，然后<code>回车</code>即可。最后再运行<code>flutter doctor</code>监测一下，问题已经解决。</p>
+<pre><code class="text">[✓] Android toolchain - develop for Android devices (Android SDK version 28.0.3)</code></pre>
+<h4 id="1-3-2libimobiledevice-and-ideviceinstaller-are-not-installed"><a href="#1-3-2libimobiledevice-and-ideviceinstaller-are-not-installed" class="headerlink" title="1.3.2libimobiledevice and ideviceinstaller are not installed"></a>1.3.2libimobiledevice and ideviceinstaller are not installed</h4><p>根据提示，依次运行：</p>
+<pre><code class="terminal">brew update
+brew install --HEAD usbmuxd
+brew link usbmuxd
+brew install --HEAD libimobiledevice
+brew install ideviceinstaller</code></pre>
+<p>运行<code>brew update</code>会卡住不动，此时需要配置一下国内镜像：</p>
+<pre><code class="terminal">// 第一步，替换brew.git
+cd &quot;$(brew --repo)&quot;
+git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+// 第二步：替换homebrew-core.git
+cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;
+git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git</code></pre>
+<p>之后再运行<code>brew update</code>，此过程会持续一段时间，请耐心等待。<br>运行<code>brew install --HEAD usbmuxd</code>可能会出现以下问题：</p>
+<pre><code class="terminal">Error: Xcode alone is not sufficient on High Sierra.
+Install the Command Line Tools:
+  xcode-select --install</code></pre>
+<p>根据提示运行<code>xcode-select --install</code>，安装完成后再继续上面步骤。</p>
+<blockquote>
+<p>注意：此命令不是重新安装XCode，只是一些安装Ruby所需的命令行工具，无需紧张。</p>
+</blockquote>
+<h4 id="1-3-3ios-deploy-not-installed"><a href="#1-3-3ios-deploy-not-installed" class="headerlink" title="1.3.3ios-deploy not installed"></a>1.3.3ios-deploy not installed</h4><p>根据提示，依次运行：</p>
+<pre><code class="terminal">brew install ios-deploy</code></pre>
+<h4 id="1-3-4CocoaPods-not-installed"><a href="#1-3-4CocoaPods-not-installed" class="headerlink" title="1.3.4CocoaPods not installed"></a>1.3.4CocoaPods not installed</h4><p>根据提示，依次运行：</p>
+<pre><code class="terminal">brew install cocoapods
+pod setup</code></pre>
+<p>pod setup运行时会相当的慢，最好还是添加国内镜像。清华大学镜像使用方法：</p>
+<pre><code class="terminal">cd ~/.cocoapods/repos 
+pod repo remove master
+git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git master</code></pre>
+<p>最后进入自己的工程，在自己工程的podFile第一行加上：</p>
+<pre><code class="terminal">source &#39;https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git&#39;</code></pre>
+<p>使用前8kb/s的速度，看看使用后的速度，这还不是峰值。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/18236822-9744370fcf06928c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>经过一系列操作过后，再运行<code>pod setup</code>。运行完成之后，以为就要开始创建项目了，但是太天真了。</p>
+<pre><code class="terminal">Verify that all connected devices have been paired with this computer in Xcode.
+If all devices have been paired, libimobiledevice and ideviceinstaller may require updating.
+To update with Brew, run:
+   brew update
+   brew uninstall --ignore-dependencies libimobiledevice
+   brew uninstall --ignore-dependencies usbmuxd
+   brew install --HEAD usbmuxd
+   brew unlink usbmuxd
+   brew link usbmuxd
+   brew install --HEAD libimobiledevice
+   brew install ideviceinstaller</code></pre>
+<p>不过不要慌，找了很多资料发现重启一下就好了。实验了一下，发现的确可以，不过好像治标不治本。不管那么多了，在运行<code>flutter doctor</code>监测一下，除了IDE和设备之外，其他的环境都好了，设备的问题只要在启动App的时候打开模拟器就好了。</p>
+<pre><code class="terminal">Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel stable, v1.5.4-hotfix.2, on Mac OS X 10.13.6 17G7024,
+    locale zh-Hans-CN)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+[✓] iOS toolchain - develop for iOS devices (Xcode 10.0)
+[!] Android Studio (not installed)
+[!] IntelliJ IDEA Ultimate Edition (version 2017.3.3)
+    ✗ Flutter plugin not installed; this adds Flutter specific functionality.
+    ✗ Dart plugin not installed; this adds Dart specific functionality.
+[✓] VS Code (version 1.35.1)
+[!] Connected device
+    ! No devices available
+
+! Doctor found issues in 3 categories.</code></pre>
+<h4 id="1-3-5Flutter-extension-not-installed"><a href="#1-3-5Flutter-extension-not-installed" class="headerlink" title="1.3.5Flutter extension not installed"></a>1.3.5Flutter extension not installed</h4><p>推荐使用VS Code开发Flutter，所以只用处理一个IDE的问题即可。需要安装Dart插件。</p>
+<p><strong>欢迎大佬纠错指导，欢迎交流学习。</strong></p>
+<blockquote>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/Code4GL">https://github.com/Code4GL</a><br>公众号：code_everything<br>QQ：771841496<br>邮箱：<a href="mailto:&#x67;&#x75;&#x61;&#x6e;&#x6c;&#105;&#49;&#57;&#x39;&#49;&#x40;&#49;&#x36;&#51;&#46;&#99;&#111;&#x6d;">&#x67;&#x75;&#x61;&#x6e;&#x6c;&#105;&#49;&#57;&#x39;&#49;&#x40;&#49;&#x36;&#51;&#46;&#99;&#111;&#x6d;</a></p>
+</blockquote>
+<p><img src="/images/code_everything.jpg" alt="code_everything"></p>
+
+    </div>
+
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2018 - 2020 一修
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @一修
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>

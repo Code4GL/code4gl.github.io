@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>一修 || 自己</title>
+    <title>一修 || 03Flutter系列之第一个Flutter项目</title>
     <meta name="author" content="一修">
     <meta name="description" content=" ">
     <meta name="keywords" content=" ">
@@ -150,142 +150,85 @@
 
                 <div id="main">
                      
-<div class="categories-tags">
-    
-    <div class="all-s">
-        
-        
-        <span>
-            <a href="/tags/混合App/" style=background:#00a596>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                混合App
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/自己/" style='background:linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)'>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                自己
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/生活/" style=background:#00bcd4>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                生活
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/高性能JavaScript/" style=background:#ffa2c4>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                高性能JavaScript
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/原生JS/" style=background:#ffa2c4>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                原生JS
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/ReactNative系列/" style=background:#00bcd4>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                ReactNative系列
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/Flutter系列/" style=background:#ff7d73>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                Flutter系列
-            </a>
-        </span>
-        
-        
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>03Flutter系列之第一个Flutter项目 </h1>
     </div>
-    <div id="archives">
-        
-        <a-timeline>
-            <a-timeline-item color="#a5c2f5">
-                <a-card hoverable>
-                    <div class="item-time">2020/12/22</div>
-                    <a href="/2020/12/22/essay/第一次总是比较重要的/">
-                        <h3>第一次总是比较重要的</h3>
-                    </a>
-                    <div class="info">
-                        
-                        <span class="category">
-                            <a href="/categories/随笔">
-                                <span class="icon">
-                                    <a-icon type="book" theme="filled" />
-                                </span>
-                                随笔
-                            </a>
-                        </span>
-                        
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/12/23
+        </span>
 
-                        
-                        <span class="tags">
-                            <span class="icon">
-                                <a-icon type="tags" theme="filled" />
-                            </span>
-                            
-                            <span class="tag">
-                                
-                                <a href="/tags/自己" style=color:#ff7d73>
-                                    自己
-                                </a>
-                            </span>
-                            
-                            <span class="tag">
-                                
-                                <a href="/tags/生活" style=color:#ff7d73>
-                                    生活
-                                </a>
-                            </span>
-                            
-                        </span>
-                        
-                    </div>
-                </a-card>
-            </a-timeline-item>
-        </a-timeline>
+        
+        <span class="category">
+            <a href="/categories/Flutter">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                Flutter
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Flutter系列" style=color:#00bcd4>
+                    Flutter系列
+                </a>
+            </span>
+            
+        </span>
         
     </div>
-    <script>
-        new Vue({
-            el: '#archives'
-        })
-    </script>
+
+    <div class="content" v-pre>
+        <p><img src="https://upload-images.jianshu.io/upload_images/18236822-921b445577766d10.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><h2 id="二、创建项目"><a href="#二、创建项目" class="headerlink" title="二、创建项目"></a>二、创建项目</h2><p>运行<code>flutter create xxx_xxx</code>，看到以下画面说明项目创建成功。</p>
+<blockquote>
+<p>请注意：项目名称只能由<code>小写字母</code>、<code>数字</code>或<code>下划线</code>组成，即<code>[a-z0-9_]</code>。</p>
+</blockquote>
+<pre><code class="teminal">All done!
+[✓] Flutter is fully installed. (Channel stable, v1.5.4-hotfix.2, on Mac OS X
+    10.13.6 17G7024, locale zh-Hans-CN)
+[✓] Android toolchain - develop for Android devices is fully installed. (Android
+    SDK version 28.0.3)
+[✓] iOS toolchain - develop for iOS devices is fully installed. (Xcode 10.0)
+[!] Android Studio is not available. (not installed)
+[!] IntelliJ IDEA Ultimate Edition is partially installed; more components are
+    available. (version 2017.3.3)
+[✓] VS Code is fully installed. (version 1.35.1)
+[!] Connected device is not available.
+
+Run &quot;flutter doctor&quot; for information about installing additional components.
+
+In order to run your application, type:
+
+  $ cd flutter_show
+  $ flutter run
+
+Your application code is in flutter_show/lib/main.dart.</code></pre>
+<h2 id="三、运行项目"><a href="#三、运行项目" class="headerlink" title="三、运行项目"></a>三、运行项目</h2><p>根据官网教程的提示，运行项目：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/18236822-6bc5b5ca74b13389.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p><strong>欢迎大佬纠错指导，欢迎交流学习。</strong></p>
+<blockquote>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/Code4GL">https://github.com/Code4GL</a><br>公众号：code_everything<br>QQ：771841496<br>邮箱：<a href="mailto:&#103;&#117;&#x61;&#110;&#108;&#105;&#49;&#x39;&#x39;&#x31;&#64;&#49;&#54;&#51;&#46;&#x63;&#111;&#x6d;">&#103;&#117;&#x61;&#110;&#108;&#105;&#49;&#x39;&#x39;&#x31;&#64;&#49;&#54;&#51;&#46;&#x63;&#111;&#x6d;</a></p>
+</blockquote>
+<p><img src="/images/code_everything.jpg" alt="code_everything"></p>
+
+    </div>
+
+    
 </div>
                      
 <footer id="footer">
