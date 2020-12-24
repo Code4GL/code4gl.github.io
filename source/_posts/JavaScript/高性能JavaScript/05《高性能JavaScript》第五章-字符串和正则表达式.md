@@ -8,11 +8,11 @@ tags:
     - 原生JS
 ---
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-ed739b07cf9eed5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![highPerformanceJs](/images/javascript/highPerformanceJs/highPerformanceJs.jpg)
 
 ## 5.1 字符串连接
 
-![常见字符串合并方法](https://upload-images.jianshu.io/upload_images/18236822-a4173ea40035a0df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![常见字符串合并方法](/images/javascript/highPerformanceJs/highPerformanceJs05/string.png)
 
 当连接少量字符串时，这些方法运行速度都很快。随着要合并的字符串长度和数量增加时，有些方法就开始展现优势。
 
@@ -42,7 +42,7 @@ str = str + "one" + "two";
 equivalent to str = ((str + "one") + "two")
 ```
 
-![内存使用示例](https://upload-images.jianshu.io/upload_images/18236822-a0abb61cf5f972af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![内存使用示例](/images/javascript/highPerformanceJs/highPerformanceJs05/ram.png)
 
 ### 5.1.2 数组项合并
 
@@ -90,11 +90,11 @@ str = String.prototype.concat.apply(str, array);
 
 回溯过程如下：
 
-![分支回溯](https://upload-images.jianshu.io/upload_images/18236822-0967dead5e8cc4af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![分支回溯](/images/javascript/highPerformanceJs/highPerformanceJs05/reg.png)
 
 贪婪量词和惰性量词回溯：
 
-![贪婪量词和惰性量词回溯](https://upload-images.jianshu.io/upload_images/18236822-3121a5a4ea9f44e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![贪婪量词和惰性量词回溯](/images/javascript/highPerformanceJs/highPerformanceJs05/reg1.png)
 
 ### 5.2.3 提高效率的方法
 

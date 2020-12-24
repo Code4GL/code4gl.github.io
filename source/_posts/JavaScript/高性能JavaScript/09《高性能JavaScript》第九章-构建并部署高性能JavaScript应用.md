@@ -8,7 +8,7 @@ tags:
     - 原生JS
 ---
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-ed739b07cf9eed5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![highPerformanceJs](/images/javascript/highPerformanceJs/highPerformanceJs.jpg)
 
 出于出书时间的考虑，本章使用到的技术可能已经过时，主要理解其思想。本章的目的是了解如何有效地组织并部署基于JavaScript的Web应用的一些必要知识。
 

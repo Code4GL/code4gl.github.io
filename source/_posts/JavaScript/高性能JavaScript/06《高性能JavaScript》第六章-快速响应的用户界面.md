@@ -8,7 +8,7 @@ tags:
     - 原生JS
 ---
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-ed739b07cf9eed5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![highPerformanceJs](/images/javascript/highPerformanceJs/highPerformanceJs.jpg)
 
 ## 6.1 浏览器UI线程
 
@@ -32,13 +32,13 @@ tags:
 </html>
 ```
 
-![UI线程处理流程](https://upload-images.jianshu.io/upload_images/18236822-33b7154924cc7ebf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![UI线程处理流程](/images/javascript/highPerformanceJs/highPerformanceJs06/ui-thread.png)
 
 ### 6.1.1 浏览器限制
 
 浏览器限制了JavaScript任务的运行时间，它确保某些恶意代码不能通过永不停止的密集操作锁住用户的浏览器或计算机。此类限制分为两种：调用栈大小限制（第四章讨论过）和长时间运行脚本限制。
 
-![运行超过500万条语句时，IE警告对话框](https://upload-images.jianshu.io/upload_images/18236822-774e70f3cc68fa7d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![运行超过500万条语句时，IE警告对话框](/images/javascript/highPerformanceJs/highPerformanceJs06/browser-restrictions.png)
 
 对于不同浏览器限制也不一样：
 
@@ -72,7 +72,7 @@ button.onclick = function(){
 };
 ```
 
-![250秒后加入队列](https://upload-images.jianshu.io/upload_images/18236822-2884cddde6910f94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![UI线程处理流程](/images/javascript/highPerformanceJs/highPerformanceJs06/ui-thread1.png)
 
 > 注意：定时器代码只有在创建它的函数执行完成之后，才有可能被执行。
 
@@ -87,7 +87,7 @@ button.onclick = function(){
 };
 ```
 
-![定时器中代码耗时超过设定时间50秒](https://upload-images.jianshu.io/upload_images/18236822-9b44ec9ed569cc79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![定时器中代码耗时超过设定时间50秒](/images/javascript/highPerformanceJs/highPerformanceJs06/ui-thread2.png)
 
 ### 6.2.2 定时器的精度
 

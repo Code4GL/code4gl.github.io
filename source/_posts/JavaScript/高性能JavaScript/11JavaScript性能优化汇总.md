@@ -8,7 +8,7 @@ tags:
     - 原生JS
 ---
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-ed739b07cf9eed5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![highPerformanceJs](/images/javascript/highPerformanceJs/highPerformanceJs.jpg)
 
 本文主要针对《高性能JavaScript》书中提到的优化方案进行总结，只列出文中推荐最高效的方案，其他方案的信息请查看之前的文章。
 
