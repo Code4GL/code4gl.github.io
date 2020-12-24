@@ -8,7 +8,7 @@ tags:
 categories: ReactNative
 ---
 
-![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![reactnative](/images/reactnative/reactnative.jpg)
 
 ## 一、概述
 
@@ -37,7 +37,7 @@ react-native init HelloWorld --version x.xx
 ```
 
 出现这样的界面，就算创建成果了。
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-5bdfabcd23ab0a34.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![flutterDemo](/images/reactnative/reactnativeSeries/reactnativeSeries09/flutterDemo.png)
 
 ## 四、运行IOS
 
@@ -46,48 +46,48 @@ IOS启动有两种方式：XCode中启动和运行命令启动。
 1. XCode中启动：用XCode打开项目中/ios/.xcodeproj文件，选择一个模拟器，然后启动项目；
 2. 命令启动：根目录下运行`react-native run-ios`即可，它会选择一个默认的模拟器启动；若想指定模拟器，则需要加上参数`react-native run-ios --simulator 'iPhone X'`。
 运行成功后，就会出现以下页面。
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-8658bfb52082d99a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![flutterDemo](/images/reactnative/reactnativeSeries/reactnativeSeries09/flutterDemo1.png)
 
 `command+D`打开设置面板，点击`Enable Hot Reloading`开启热部署，即可进行开发。尝试着在`index.js`里修改一点代码。
 
 ## 五、运行Android
 
 Android运行命令：`react-native run-android`。此时，我们可能会遇见第一个报错：
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-6cc7ed49995de681.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![flutterDemo](/images/reactnative/reactnativeSeries/reactnativeSeries09/flutterDemo2.png)
 
 查看错误原因，则是没有链接的设备，我们得先启动模拟器。启动完成之后，我们可以运行`adb devices`来查看已经链接的设备列表。
 如果还是没有链接成功，则需要手动链接，运行`adb connect 127.0.0.1:端口号`，端口号是根据模拟器类型有所不同的，Genymotion的默认端口号为`5555`。可以去[常用模拟器端口号](https://www.jianshu.com/p/c8b3c549d707)查看。
 
 出现以下界面，表示运行成功。
 
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-1f9bd490354d4219.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![flutterDemo](/images/reactnative/reactnativeSeries/reactnativeSeries09/flutterDemo3.png)
 
 点击菜单打开设置面板，开启热加载`Enable Hot Reloading`。就可以进行开发了。尝试着在`index.js`里修改一点代码：加上`My First`。
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-e857f2873b5f283f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![flutterDemo](/images/reactnative/reactnativeSeries/reactnativeSeries09/flutterDemo4.png)
 
 此时，我们的项目就启动好了。
 
 初次启动时，可能会遇见各式各样的问题：
 
 1. 模拟器链接成功，项目启动红屏。
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-77debd773c94ab7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![simulator](/images/reactnative/reactnativeSeries/reactnativeSeries09/simulator.png)
 
 > 解决方案：点击菜单，打开`Dev Settings`，进入开发者设置；进入host设置，将host设置为`172.17.100.2:8081`；之后返回，重新进入菜单，选择`Reload`重新加载。
 
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-1e14e133aeeeb8d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![simulator](/images/reactnative/reactnativeSeries/reactnativeSeries09/simulator1.png)
 
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-941e8efd52027699.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![simulator](/images/reactnative/reactnativeSeries/reactnativeSeries09/simulator2.png)
 2. 设置host之后还是不起作用
 > 运行`adb shell`，进入shell环境；然后运行`getprop`获取相关参数。找到`dhcp.eth1.server`对应的IP地址；找到ip地址之后，重复第一步，端口还是`8081`。
 
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-8052efa78a82e65f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![simulator](/images/reactnative/reactnativeSeries/reactnativeSeries09/simulator3.png)
 
 一般情况下，`dhcp.eth1.server`对应的IP地址都是一样的，即`172.17.100.2`，所以大部分情况下不需要执行`adb shell`。
 
 ## 六、目录结构介绍
 
 此时我们可以使用之前下载好的VS Code打开项目了。进入VS Code之后点击“文件”，选择“打开文件夹”，打开刚才创建的项目HelloWorld。
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-fef1b43d9e8b0fe3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![flutterContents](/images/reactnative/reactnativeSeries/reactnativeSeries09/flutterContents.png)
 
 目录介绍：
 

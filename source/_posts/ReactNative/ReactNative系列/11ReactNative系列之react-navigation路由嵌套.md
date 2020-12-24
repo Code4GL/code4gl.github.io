@@ -8,7 +8,7 @@ tags:
 categories: ReactNative
 ---
 
-![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![reactnative](/images/reactnative/reactnative.jpg)
 
 ## 一、概述
 
@@ -18,7 +18,7 @@ react-navigation是FaceBook在2017年1月份才推出的一款导航组件，致
 
 随着react-navigation的不断更新，路由策略和API的使用也会不断更新。通过在不断的实践中摸索，基于react-navigation3.x的路由嵌套策略更新如下。
 
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-8c50423887c786b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![reactnativeRoute](/images/reactnative/reactnativeSeries/reactnativeSeries11/reactnativeRoute.png)
 
 如图所示，路由总共分为五层：
 

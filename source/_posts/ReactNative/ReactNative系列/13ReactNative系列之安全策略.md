@@ -8,7 +8,7 @@ tags:
 categories: ReactNative
 ---
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![reactnative](/images/reactnative/reactnative.jpg)
 
 ## 一、概述
 
@@ -19,7 +19,7 @@ Android安全问题可以参考[移动App安全测试](https://www.cnblogs.com/y
 
 主要防止Apk被反编译后对源码的解读。在/Android/app/build.gradle文件中将enableProguardInReleaseBuilds值设置为true。
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-ad1e35aa04a1ff0c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![codeObfuscation](/images/reactnative/reactnativeSeries/reactnativeSeries13/codeObfuscation.png)
 
 > 注意：代码混淆后可能会出现打包后App第三方功能无法使用，这可能是没有忽略第三方依赖的代码混淆导致的。需要在`proguard-rules.pro`文件中添加需要忽略混淆的第三方组件。如忽略微信相关组件：
 

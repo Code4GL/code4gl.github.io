@@ -8,7 +8,7 @@ tags:
 categories: ReactNative
 ---
 
-![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![reactnative](/images/reactnative/reactnative.jpg)
 
 ## 一、概述
 
@@ -20,9 +20,9 @@ Android SDK Manager是安卓SDK管理工具，它可以管理你计算机上的�
 >下载地址：<http://www.androiddevtools.cn/>
 
 此网站专门为安卓开发这提供的资源下载网站，进入之后点击“Android SDK工具”。
-![SDK Tools](https://upload-images.jianshu.io/upload_images/18236822-4727a7dd428cbac2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![sdkManager](/images/reactnative/reactnativeSeries/reactnativeSeries02/sdkManager.png)
 点击之后，进入如下页面，选择需要下载的版本。一个是需要安装的，一个是压缩包直接解压。这里选择的是Windows系统的版本。
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-937a7792cf6920d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![sdkManager](/images/reactnative/reactnativeSeries/reactnativeSeries02/sdkManager1.png)
 下载完成之后就点击安装，安装完成后还需要配置环境变量。
 
 ## 三、环境变量配置
@@ -35,7 +35,7 @@ Android SDK Manager是安卓SDK管理工具，它可以管理你计算机上的�
 ```
 
 如果不明白的可以去看看上一篇文章中的Java环境变量配置：[ReactNative系列之Windows环境搭建-Java环境](https://www.jianshu.com/p/504bc59e0b0e)。然后调出命令行，进行验证。输入“adb”命令，如果显示相关信息则说明配置成功，否则失败。
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-871ca79719236acb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![sdkManager](/images/reactnative/reactnativeSeries/reactnativeSeries02/sdkManager2.png)
 
 ## 四、国内仓库镜像
 
@@ -56,12 +56,12 @@ Android SDK Manager是安卓SDK管理工具，它可以管理你计算机上的�
 > 这里务必请注意，由于网络或者镜像仓库的问题，有些镜像中依赖包的数量并不全，如果发现没有自己想要的包时，重启、更换镜像或不使用镜像都是解决的方法。还有些依赖不知道什么原因，始终不会没有，这时就需要从网站上下载后移植到对应的文件夹中，这个后面遇见了会讲。
 
 添加镜像：Tools（左上角）>Options：
-![镜像仓库](https://upload-images.jianshu.io/upload_images/18236822-cbd198a2915b79a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![sdkManager](/images/reactnative/reactnativeSeries/reactnativeSeries02/sdkManager3.png)
 
 ## 五、常见依赖包
 
 安装成功之后，会产生两个启动文件，一个是AVD Manager，一个是SDK Manager。前者是自带的安卓手机模拟器，为项目调试准备的，不过是相当的卡，不建议使用，后面会有专门推荐使用工具；后者就是安卓依赖的管理器，点击启动进入以下窗口。
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-55dabc6ab533cc12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![sdkManager](/images/reactnative/reactnativeSeries/reactnativeSeries02/sdkManager4.png)
 
 ### 5.1常见包说明
 
@@ -78,7 +78,7 @@ Android Support Repository | 主要是方便在gradle中使用Android Support Li
 Android Support Library | 提供的支持库。
 > 在很多中情况下Android Support Library是无法找到的，需要在网站上重新下载，之后解压到SDK的extras目录下即可。还是在AndroidDevTools下载即可，下载地址：<http://www.androiddevtools.cn/>。下载完成之后，根据网站上的指导将文件转移到指定文件夹即可。
 
-![Android Support Library](https://upload-images.jianshu.io/upload_images/18236822-bc8bdbb0914f67ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![sdkManager](/images/reactnative/reactnativeSeries/reactnativeSeries02/sdkManager5.png)
 > 如果需要用自带的模拟器调试，还需要下载最后一项Intel x86 Emulator Accelerator，这个是对AVD Manager在Windows上运行进行的优化。但是这个包后面会显示Not compatible with Windows，此时也是需要额外重新下载安装的，这个可以在Intel官网上下载，下载地址：<https://software.intel.com/en-us/articles/intel-hardware-accelerated-execution-manager-intel-haxm>
 
 ### 5.2ReactNative0.58+必备依赖包

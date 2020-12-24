@@ -8,7 +8,7 @@ tags:
 categories: ReactNative
 ---
 
-![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![reactnative](/images/reactnative/reactnative.jpg)
 
 ## 一、概述
 
@@ -21,7 +21,7 @@ Git的下载安装没什么特殊要注意的地方。下载地址：[https://gi
 ## 三、Python环境
 
 从老的版本到现在，官网就一直要求Python环境，但是到现在我电脑还没专门安装过Python，也没有什么地方要求要安装。
-![Python.png](https://upload-images.jianshu.io/upload_images/18236822-0a969e0340072e45.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Python](/images/reactnative/reactnativeSeries/reactnativeSeries04/python.png)
 至此，Windows下的环境搭建全部完成。
 
 **欢迎大佬纠错指导，欢迎交流学习。**

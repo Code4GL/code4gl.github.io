@@ -8,7 +8,7 @@ tags:
 categories: ReactNative
 ---
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![reactnative](/images/reactnative/reactnative.jpg)
 
 ## 一、概述
 
@@ -40,7 +40,7 @@ Android的方式则大有不同，Apk由于不受App市场及手机限制，可�
 
 说起RN，就不得不说说热更新，但是目前并没有一个可靠的免费平台提供支持，这使好多开发者望而却步。
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-a9fb34683b1f202f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![hotRload](/images/reactnative/reactnativeSeries/reactnativeSeries14/hotRload.png)
 
 热更新一般都是更新JS和图片，也就是在不重新安装apk的情况下更新JS和图片。目前市面上常见的热更新方案有两款：微软的[react-native-code-push](https://github.com/Microsoft/react-native-code-push)和RN中文网的[react-native-pushy](https://github.com/reactnativecn/react-native-pushy)。如果有要求也能自己搭建热更新服务。对热更新细化后还可以分为：全量热更新和补丁热更新。
 > 苹果允许使用热更新[Apple's developer agreement 条款3.3.2](https://developer.apple.com/programs/information/Apple_Developer_Program_Information_8_12_15.pdf), 但是规定不能弹框提示用户更新，影响用户体验。苹果禁的是 rollout.io, JSPatch 这类具备修改原生代码能力的框架。 Google Play也允许热更新，但必须弹框告知用户更新。在中国的android市场发布时，都必须关闭更新弹框，否则会在审核应用时以“请上传最新版本的二进制应用包”驳回应用。

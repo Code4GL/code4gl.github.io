@@ -8,7 +8,7 @@ tags:
 categories: ReactNative
 ---
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![reactnative](/images/reactnative/reactnative.jpg)
 
 ## 一、概述
 
@@ -22,7 +22,7 @@ categories: ReactNative
 Android的`icon`存放在`android/app/src/main/res/`目录，里面会有五个存放Android图标的文件夹，在RN0.49版本后每个文件夹会有两种图标：圆形和方形，分别为了适配Android不同厂商的图标。只需要将自己的`icon`替换掉原来默认的`icon`即可。
 > 注意：`icon`名称、格式什么的都不要改变。
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-faa3fed65552dd68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![androidIcon](/images/reactnative/reactnativeSeries/reactnativeSeries12/androidIcon.png)
 
 如图，每个文件夹对应图标的尺寸如下：
 
@@ -36,7 +36,7 @@ Android的`icon`存放在`android/app/src/main/res/`目录，里面会有五个�
 
 IOS的话，就需要在XCode上进行添加，将对应的尺寸拖进对应的位置即可。
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-7fa70245576629ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![iosIcon](/images/reactnative/reactnativeSeries/reactnativeSeries12/iosIcon.png)
 
 分为五个类型，尺寸分别如下：
 
@@ -50,17 +50,17 @@ IOS的话，就需要在XCode上进行添加，将对应的尺寸拖进对应的
 
 RN的启动页使用需要借助一个第三方组件[react-native-splash-screen](https://github.com/crazycodeboy/react-native-splash-screen)，进入GitHub主页可以看到它的集成过程和使用方法。这里就不讲它的集成过程，官网都有详细的教程。主要讲一下集成过程中可能会出现的问题。
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-7965ed1ba7b3e4a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![splashScreen](/images/reactnative/reactnativeSeries/reactnativeSeries12/splashScreen.png)
 
 ### 3.1Android
 
 在集成Android的过程中会发现，在当前版本MainActivity中没有`onCreate`这个方法，需要把此方法复制到MainActivity中，同时将Bundle包也引入才能配置成功。
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-9d1144a2ae2e082a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![splashScreen](/images/reactnative/reactnativeSeries/reactnativeSeries12/splashScreen1.png)
 
 和图标一样，Android的启动页图片也存放在`android/app/src/main/res/`目录，只是文件夹名称不同了。
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-9f9b09a055580d7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![splashScreen](/images/reactnative/reactnativeSeries/reactnativeSeries12/splashScreen2.png)
 
 Android启动图对应尺寸如下：
 
@@ -74,19 +74,19 @@ Android启动图对应尺寸如下：
 
 在IOS的配置过程中，不熟悉XCode的同志，不容易找到的第4步对应的位置：
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-c285942c0534c401.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![splashScreen](/images/reactnative/reactnativeSeries/reactnativeSeries12/splashScreen3.png)
 
 如图所示：
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-cd65b9a024f05182.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![splashScreen](/images/reactnative/reactnativeSeries/reactnativeSeries12/splashScreen4.png)
 
 需要双击弹出paths添加弹框，进行添加。
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-a58f62f4c39edb7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![splashScreen](/images/reactnative/reactnativeSeries/reactnativeSeries12/splashScreen5.png)
 
 如果一切都配置成功，启动页也显示出来，发现卡在启动页不动了。此时是因为App启动后没有关闭启动页，需要添加代码关闭即可：
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-5608f7acb58639c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![splashScreen](/images/reactnative/reactnativeSeries/reactnativeSeries12/splashScreen6.png)
 
 针对IOS8以上的版本整理了如下启动页需要的尺寸：
 
@@ -101,18 +101,18 @@ Android启动图对应尺寸如下：
 引导页一般为可以滑动的几个页面组成，通常可以理解为全屏的轮播图，在轮播图的最后一页给个入口进入App。需要注意的是，引导页只会在用户首次打开App时才会显示，此时就需要利用RN的本地储存`AsyncStorage`了。
 > 首次进入App时需要储存一个值用于判断用户是否已经打开过App。在下次进入时候去判断是否有此值，若有则是老用户，直接进入App；若没有，则是新用户，需要进入引导页。
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-b2dd01fc1f4f7ffd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![guidePages](/images/reactnative/reactnativeSeries/reactnativeSeries12/guidePages.png)
 
 我们可以借助一个轮播图的组件来实现以上效果：[react-native-swiper](https://github.com/leecade/react-native-swiper)
 。由于是使用全屏的图片，Android和IOS在样式上要做适当的适配。
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-12c109889c1b6fd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![guidePages](/images/reactnative/reactnativeSeries/reactnativeSeries12/guidePages1.png)
 
 ## 五、本地储存
 
 `AsyncStorage`是一个简单，未加密，异步，持久，键值存储系统，是应用程序的全局。应该使用它来代替LocalStorage。在iOS上，`AsyncStorage`由本机代码支持，该代码将小值存储在序列化字典中，将较大值存储在单独的文件中。在Android上，`AsyncStorage`将根据可用内容使用RocksDB或SQLite。
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-cd46a20fb74687e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![asyncStorage](/images/reactnative/reactnativeSeries/reactnativeSeries12/asyncStorage.png)
 
 其次，这个组件已经转移至[react-native-community](https://github.com/react-native-community)，后期react-native库中将不维护。
 > 题外话，RN开始慢慢将类似这样的外围组件全部转移到`react-native-community`库中，比如Slider、ViewPagerAndroid等等。
@@ -209,43 +209,43 @@ export const asiosPost = (url, params, config) => new Promise((resolve, reject) 
 
 MobPush放在第一位是因为它的免费，不仅是普通的推送免费，厂商推送也是免费的，这在其他平台是找不到的。其次，它的短信服务也有免费的，所以极力推荐。只可惜不支持RN，若要集成，需要做原生处理。[http://www.mob.com/mobService/mobpush](http://www.mob.com/mobService/mobpush)
 
-![MobPush](https://upload-images.jianshu.io/upload_images/18236822-79470d96b14e8c2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![MobPush](/images/reactnative/reactnativeSeries/reactnativeSeries12/mobpush.png)
 
 ### 7.2极光推送
 
 [https://www.jiguang.cn/push](https://www.jiguang.cn/push)
 
-![极光推送](https://upload-images.jianshu.io/upload_images/18236822-900bbdd4c80b5d74.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![jiguangpush](/images/reactnative/reactnativeSeries/reactnativeSeries12/jiguangpush.png)
 
 ### 7.3友盟推送
 
 [https://www.umeng.com/push](https://www.umeng.com/push)
 
-![友盟推送](https://upload-images.jianshu.io/upload_images/18236822-eea075a85f969ce5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![umengpush](/images/reactnative/reactnativeSeries/reactnativeSeries12/umengpush.png)
 
 ### 7.4个推推送
 
 [https://www.getui.com/cn/getui.html](https://www.getui.com/cn/getui.html)
 
-![个推推送](https://upload-images.jianshu.io/upload_images/18236822-3d4c558eb27e107e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![getui](/images/reactnative/reactnativeSeries/reactnativeSeries12/getui.png)
 
 ### 7.5腾讯信鸽推送
 
 [https://xg.qq.com/](https://xg.qq.com/)
 
-![信鸽推送](https://upload-images.jianshu.io/upload_images/18236822-046ad96e3c4fd3fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![xg](/images/reactnative/reactnativeSeries/reactnativeSeries12/xg.png)
 
 ### 7.6百度云推送
 
 [http://push.baidu.com/](http://push.baidu.com/)
 
-![百度云推送](https://upload-images.jianshu.io/upload_images/18236822-b27d5a6075624073.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![baidu](/images/reactnative/reactnativeSeries/reactnativeSeries12/baidu.png)
 
 ### 7.7阿里云推送
 
 [https://help.aliyun.com/product/30047.html?spm=a2c4g.11186623.6.540.614a52e79dFt5d](https://help.aliyun.com/product/30047.html?spm=a2c4g.11186623.6.540.614a52e79dFt5d)
 
-![阿里云推送](https://upload-images.jianshu.io/upload_images/18236822-2b70372467a5a0e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![aliyun](/images/reactnative/reactnativeSeries/reactnativeSeries12/aliyun.png)
 
 ## 八、分享
 
@@ -259,21 +259,21 @@ MobPush放在第一位是因为它的免费，不仅是普通的推送免费，�
 
 react-native-share是`react-native-community`社区维护的一个分享组件，但是大多数面向的是国外的平台，国内的比较少，地址[https://github.com/react-native-community/react-native-share](https://github.com/react-native-community/react-native-share)。
 
-![react-native-community](https://upload-images.jianshu.io/upload_images/18236822-0e251058e808ee27.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![share](/images/reactnative/reactnativeSeries/reactnativeSeries12/share.png)
 
 为此，国内有开发者已经推出了自己的分享组件：[https://github.com/songxiaoliang/react-native-share](https://github.com/songxiaoliang/react-native-share)，有点可惜的是推广的不够，star太少了，不过并不影响使用。
 
-![songxiaoliang](https://upload-images.jianshu.io/upload_images/18236822-27166e972a555dfc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![share](/images/reactnative/reactnativeSeries/reactnativeSeries12/share1.png)
 
 ### 8.3react-native-wechat
 
 react-native-wechat是专门为微信推出的一个组件，集成了微信登录、支付、分享等一系列功能，如果只是使用到了微信，那么这绝对是个最好的选择。[https://github.com/yorkie/react-native-wechat](https://github.com/yorkie/react-native-wechat)
 
-![image](https://upload-images.jianshu.io/upload_images/18236822-7d8fafe1312dc856.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![share](/images/reactnative/reactnativeSeries/reactnativeSeries12/share2.png)
 
 > 唯一有点问题的是，目前的分享小程序功能还没实现。不过已经有puti94大佬fork了项目，实现了分享小程序，愿早点合到master上去。[https://github.com/puti94/react-native-wechat](https://github.com/puti94/react-native-wechat)
 
-![puti94](https://upload-images.jianshu.io/upload_images/18236822-0b94d0cd609af1cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![share](/images/reactnative/reactnativeSeries/reactnativeSeries12/share3.png)
 
 **欢迎大佬纠错指导，欢迎交流学习。**
 

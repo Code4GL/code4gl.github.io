@@ -8,7 +8,7 @@ tags:
 categories: ReactNative
 ---
 
-![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![reactnative](/images/reactnative/reactnative.jpg)
 
 ## 一、概述
 
@@ -17,19 +17,19 @@ Node是一个让JavaScript运行在服务端的开发平台，它让JavaScript�
 ## 二、下载安装
 
 RN官网教程是利用Chocolatey来安装，这是一个Windows上的软件管理器，可以下载Windows上的很多软件，但是对于Windows用户来说，下载软件通常都是在官网下载，而很少使用命令行来下载，所以不推荐使用。下面是提供两个网址来下载，第一个是Node的官方网站，第二个是Node的中文网站。对于没有使用科学上网工具的同志请选择国内的中文网站下载。[英文官网](https://nodejs.org/en/)和[中文官网](http://nodejs.cn/download/)。
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-204fba1d2eb3b065.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![node-download](/images/reactnative/reactnativeSeries/reactnativeSeries03/node-download.png)
 下载长期支持版本，最新版本可能会不稳定。对于安装没有什么特别注意的，主要是选择好安装路径以及是否要添加到环境变量中，此时要选择添加，否则后面需要自己手动配置。
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-50ea338e909693ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![node-download](/images/reactnative/reactnativeSeries/reactnativeSeries03/node-download1.png)
 
 ## 三、安装成功验证
 
 使用win+R，输入“cmd”打开dos命令行，键入“node -v”如图显示对应的版本号，即安装成功。若未成功请查看是否配置好了环境变量。
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-d7570c4693302aec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![node-download](/images/reactnative/reactnativeSeries/reactnativeSeries03/node-download2.png)
 
 ## 四、Npm
 
 npm全称为“Node Package Manager”。顾名思义，这是Node自带的依赖包管理器。主要功能就是管理Node依赖，包括安装、卸载、更新、查看等。做过后端的同志可能会明白，这类似后端中的jar包。Npm是跟随Node同时安装在电脑上的，在安装好Node之后，可以在dos中键入“npm -v”查看当前npm版本。
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-4c49e5783b8d9c55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![npm](/images/reactnative/reactnativeSeries/reactnativeSeries03/npm.png)
 
 ## 五、Yarn（推荐）
 

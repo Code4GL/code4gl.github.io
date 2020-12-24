@@ -8,18 +8,18 @@ tags:
 categories: ReactNative
 ---
 
-![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![reactnative](/images/reactnative/reactnative.jpg)
 
 ## 一、概述
 
 开发RN，必不可少的就是它的基础框架react-native。对于框架的学习，官网上有很多很详细的介绍，这里就不多讲了，[ReactNative英文官网](https://facebook.github.io/react-native/)和[ReactNative中文官网](https://reactnative.cn/)。像`props`、`state`等重要属性都有讲解，只是讲的比较简单，不太好理解。如果感觉不好理解，推荐去[React官网](https://zh-hans.reactjs.org/)看看。因为RN就是基于reactjs来编写的，下沉的去学习reactjs是使自己的操作更规范的一个不错方法。
 > 特别推荐一篇[React 哲学](https://zh-hans.reactjs.org/docs/thinking-in-react.html)，它主要讲从UI设计到状态处理，最后到数据流的一个过程。有一定基础的RN开发一定要看看，**特别重要**。
 
-![看完之后，就被这句话圈粉了。。。](https://upload-images.jianshu.io/upload_images/18236822-ad384e75d3e5da65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![react](/images/reactnative/reactnativeSeries/reactnativeSeries10/react.png)
 
 ## 二、生命周期图谱
 
-![图片来自网络](https://upload-images.jianshu.io/upload_images/18236822-ece353492e01e23e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![reactLifes](/images/reactnative/reactnativeSeries/reactnativeSeries10/reactLifes.png)
 
 如图，可以把RN组件生命周期大致分为三个阶段：
 
@@ -103,7 +103,7 @@ void componentWillUnmount()
 
 ## 四、调用
 
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-f77db779ca8a0983.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![reactLifes](/images/reactnative/reactnativeSeries/reactnativeSeries10/reactLifes1.png)
 
 **欢迎大佬纠错指导，欢迎交流学习。**
 

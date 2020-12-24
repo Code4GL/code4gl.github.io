@@ -8,7 +8,7 @@ tags:
 categories: ReactNative
 ---
 
-![ReactNative.jpg](https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![reactnative](/images/reactnative/reactnative.jpg)
 
 ## 一、概述
 
@@ -26,7 +26,7 @@ categories: ReactNative
 
 > 需要提到一点：有款IDE专门为RN设计的，但是只支持Mac端，号称`The best IDE for building React Native`，有点笨重，功能倒挺好的。有兴趣的同志可以去试试，它叫[Deco](https://www.decoide.org/)。
 
-![image.png](https://upload-images.jianshu.io/upload_images/18236822-87aee64bef8bc1b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![deco](/images/reactnative/reactnativeSeries/reactnativeSeries07/deco.png)
 
 **欢迎大佬纠错指导，欢迎交流学习。**
 
