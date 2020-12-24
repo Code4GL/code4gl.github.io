@@ -190,7 +190,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/ReactNative系列" style=color:#00a596>
+                <a href="/tags/ReactNative系列" style=color:#03a9f4>
                     ReactNative系列
                 </a>
             </span>
@@ -200,10 +200,10 @@
     </div>
 
     <div class="content" v-pre>
-        <p><img src="https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+        <p><img src="/images/reactnative/reactnative.jpg" alt="reactnative"></p>
 <h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>对于安全问题更多的是出现在Android系统上，IOS由于系统的封闭保证了App的安全。即使这样，也没有绝对的安全，安全都是相对的，我们只能尽可能的做到安全。<br>Android安全问题可以参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yinlili/p/9883189.html">移动App安全测试</a>这篇文章，涵盖的面比较广，下面主要介绍通常的数据安全处理，目的是增加破解者的难度。</p>
 <h2 id="二、代码混淆"><a href="#二、代码混淆" class="headerlink" title="二、代码混淆"></a>二、代码混淆</h2><p>主要防止Apk被反编译后对源码的解读。在/Android/app/build.gradle文件中将enableProguardInReleaseBuilds值设置为true。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/18236822-ad1e35aa04a1ff0c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p><img src="/images/reactnative/reactnativeSeries/reactnativeSeries13/codeObfuscation.png" alt="codeObfuscation"></p>
 <blockquote>
 <p>注意：代码混淆后可能会出现打包后App第三方功能无法使用，这可能是没有忽略第三方依赖的代码混淆导致的。需要在<code>proguard-rules.pro</code>文件中添加需要忽略混淆的第三方组件。如忽略微信相关组件：</p>
 </blockquote>
@@ -233,7 +233,7 @@
 <h2 id="四、Apk包加固"><a href="#四、Apk包加固" class="headerlink" title="四、Apk包加固"></a>四、Apk包加固</h2><p>以上方案安全的基础是Apk包不被破解的情况下，但是当下反编译已经很容易就破解了安装包，包括代码混淆等手段只是增加了破解难度而已，并没有彻底安全的方案，我们需要做的就是尽可能增加破解难度。如果需要更高的安全要求，此时就需要第三方机构了，为Apk包加壳等加强了安装包的安全，但是是需要付费的。</p>
 <p><strong>欢迎大佬纠错指导，欢迎交流学习。</strong></p>
 <blockquote>
-<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/Code4GL">https://github.com/Code4GL</a><br>公众号：code_everything<br>QQ：771841496<br>邮箱：<a href="mailto:&#103;&#117;&#x61;&#x6e;&#108;&#x69;&#49;&#57;&#57;&#x31;&#64;&#x31;&#54;&#x33;&#46;&#x63;&#x6f;&#x6d;">&#103;&#117;&#x61;&#x6e;&#108;&#x69;&#49;&#57;&#57;&#x31;&#64;&#x31;&#54;&#x33;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/Code4GL">https://github.com/Code4GL</a><br>公众号：code_everything<br>QQ：771841496<br>邮箱：<a href="mailto:&#103;&#117;&#97;&#110;&#x6c;&#x69;&#x31;&#x39;&#57;&#x31;&#64;&#49;&#54;&#51;&#x2e;&#99;&#111;&#109;">&#103;&#117;&#97;&#110;&#x6c;&#x69;&#x31;&#x39;&#57;&#x31;&#64;&#49;&#54;&#51;&#x2e;&#99;&#111;&#109;</a></p>
 </blockquote>
 <p><img src="/images/code_everything.jpg" alt="code_everything"></p>
 

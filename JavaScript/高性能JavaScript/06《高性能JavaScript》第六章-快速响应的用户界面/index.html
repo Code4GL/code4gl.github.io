@@ -183,14 +183,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/高性能JavaScript" style=color:#00a596>
+                <a href="/tags/高性能JavaScript" style=color:#03a9f4>
                     高性能JavaScript
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/原生JS" style=color:#03a9f4>
+                <a href="/tags/原生JS" style=color:#ffa2c4>
                     原生JS
                 </a>
             </span>
@@ -200,7 +200,7 @@
     </div>
 
     <div class="content" v-pre>
-        <p><img src="https://upload-images.jianshu.io/upload_images/18236822-ed739b07cf9eed5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+        <p><img src="/images/javascript/highPerformanceJs/highPerformanceJs.jpg" alt="highPerformanceJs"></p>
 <h2 id="6-1-浏览器UI线程"><a href="#6-1-浏览器UI线程" class="headerlink" title="6.1 浏览器UI线程"></a>6.1 浏览器UI线程</h2><p>浏览器UI线程：用于执行JavaScript和更新用户界面的进程。UI线程的工作基于一个简单的队列系统，任务会被保存到队列中直到进程空闲。</p>
 <pre><code class="html">&lt;html&gt;
     &lt;head&gt;
@@ -217,9 +217,9 @@
         &lt;/script&gt;
     &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<p><img src="https://upload-images.jianshu.io/upload_images/18236822-33b7154924cc7ebf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="UI线程处理流程"></p>
+<p><img src="/images/javascript/highPerformanceJs/highPerformanceJs06/ui-thread.png" alt="UI线程处理流程"></p>
 <h3 id="6-1-1-浏览器限制"><a href="#6-1-1-浏览器限制" class="headerlink" title="6.1.1 浏览器限制"></a>6.1.1 浏览器限制</h3><p>浏览器限制了JavaScript任务的运行时间，它确保某些恶意代码不能通过永不停止的密集操作锁住用户的浏览器或计算机。此类限制分为两种：调用栈大小限制（第四章讨论过）和长时间运行脚本限制。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/18236822-774e70f3cc68fa7d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="运行超过500万条语句时，IE警告对话框"></p>
+<p><img src="/images/javascript/highPerformanceJs/highPerformanceJs06/browser-restrictions.png" alt="运行超过500万条语句时，IE警告对话框"></p>
 <p>对于不同浏览器限制也不一样：</p>
 <ol>
 <li>IE：默认500万条语句；</li>
@@ -241,7 +241,7 @@ button.onclick = function()&#123;
         document.getElementById(&quot;notice&quot;).style.color = &quot;red&quot;;
     &#125;, 250);
 &#125;;</code></pre>
-<p><img src="https://upload-images.jianshu.io/upload_images/18236822-2884cddde6910f94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="250秒后加入队列"></p>
+<p><img src="/images/javascript/highPerformanceJs/highPerformanceJs06/ui-thread1.png" alt="UI线程处理流程"></p>
 <blockquote>
 <p>注意：定时器代码只有在创建它的函数执行完成之后，才有可能被执行。</p>
 </blockquote>
@@ -253,7 +253,7 @@ button.onclick = function()&#123;
     &#125;, 50); 
     anotherMethod();
 &#125;;</code></pre>
-<p><img src="https://upload-images.jianshu.io/upload_images/18236822-9b44ec9ed569cc79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="定时器中代码耗时超过设定时间50秒"></p>
+<p><img src="/images/javascript/highPerformanceJs/highPerformanceJs06/ui-thread2.png" alt="定时器中代码耗时超过设定时间50秒"></p>
 <h3 id="6-2-2-定时器的精度"><a href="#6-2-2-定时器的精度" class="headerlink" title="6.2.2 定时器的精度"></a>6.2.2 定时器的精度</h3><p>JavaScript定时器的延迟通常不太精准，相差大约几毫秒。正因为如此，定时器不能用于测量实际时间。设置定时器延迟小于<code>15毫秒</code>会导致IE锁定，所以延迟的最小值建议设为<code>25毫秒</code>，以确保至少有15毫秒延迟。</p>
 <h3 id="6-2-3-使用定时器处理数组"><a href="#6-2-3-使用定时器处理数组" class="headerlink" title="6.2.3 使用定时器处理数组"></a>6.2.3 使用定时器处理数组</h3><p>在之前讨论的循环优化技术使用后，还不能满足性能要求的时候，下一步优化就是选用定时器。它的基本方法是把循环工作分解到一系列定时器中。<br>是否可以用定时器取代循环的两个决定性因素：</p>
 <ol>
@@ -375,7 +375,7 @@ self.onmessage = function(event)&#123;
 </blockquote>
 <p><strong>欢迎大佬纠错指导，欢迎交流学习。</strong></p>
 <blockquote>
-<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/Code4GL">https://github.com/Code4GL</a><br>公众号：code_everything<br>QQ：771841496<br>邮箱：<a href="mailto:&#x67;&#117;&#x61;&#110;&#108;&#x69;&#x31;&#57;&#57;&#49;&#64;&#x31;&#54;&#51;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#117;&#x61;&#110;&#108;&#x69;&#x31;&#57;&#57;&#49;&#64;&#x31;&#54;&#51;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/Code4GL">https://github.com/Code4GL</a><br>公众号：code_everything<br>QQ：771841496<br>邮箱：<a href="mailto:&#x67;&#x75;&#97;&#x6e;&#x6c;&#x69;&#49;&#x39;&#x39;&#49;&#64;&#49;&#54;&#51;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#x75;&#97;&#x6e;&#x6c;&#x69;&#49;&#x39;&#x39;&#49;&#64;&#49;&#54;&#51;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 </blockquote>
 <p><img src="/images/code_everything.jpg" alt="code_everything"></p>
 

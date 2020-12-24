@@ -183,7 +183,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/混合App" style=color:#ff7d73>
+                <a href="/tags/混合App" style=color:#03a9f4>
                     混合App
                 </a>
             </span>
@@ -200,13 +200,13 @@
     </div>
 
     <div class="content" v-pre>
-        <p><img src="https://upload-images.jianshu.io/upload_images/18236822-e9d8ac4cb99f3b3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ReactNative.jpg"></p>
+        <p><img src="/images/reactnative/reactnative.jpg" alt="reactnative"></p>
 <h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><p>开发RN，必不可少的就是它的基础框架react-native。对于框架的学习，官网上有很多很详细的介绍，这里就不多讲了，<a target="_blank" rel="noopener" href="https://facebook.github.io/react-native/">ReactNative英文官网</a>和<a target="_blank" rel="noopener" href="https://reactnative.cn/">ReactNative中文官网</a>。像<code>props</code>、<code>state</code>等重要属性都有讲解，只是讲的比较简单，不太好理解。如果感觉不好理解，推荐去<a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/">React官网</a>看看。因为RN就是基于reactjs来编写的，下沉的去学习reactjs是使自己的操作更规范的一个不错方法。</p>
 <blockquote>
 <p>特别推荐一篇<a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/docs/thinking-in-react.html">React 哲学</a>，它主要讲从UI设计到状态处理，最后到数据流的一个过程。有一定基础的RN开发一定要看看，<strong>特别重要</strong>。</p>
 </blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/18236822-ad384e75d3e5da65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="看完之后，就被这句话圈粉了。。。"></p>
-<h2 id="二、生命周期图谱"><a href="#二、生命周期图谱" class="headerlink" title="二、生命周期图谱"></a>二、生命周期图谱</h2><p><img src="https://upload-images.jianshu.io/upload_images/18236822-ece353492e01e23e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来自网络"></p>
+<p><img src="/images/reactnative/reactnativeSeries/reactnativeSeries10/react.png" alt="react"></p>
+<h2 id="二、生命周期图谱"><a href="#二、生命周期图谱" class="headerlink" title="二、生命周期图谱"></a>二、生命周期图谱</h2><p><img src="/images/reactnative/reactnativeSeries/reactnativeSeries10/reactLifes.png" alt="reactLifes"></p>
 <p>如图，可以把RN组件生命周期大致分为三个阶段：</p>
 <ol>
 <li>第一阶段：是组件第一次绘制阶段，如图中的上面虚线框内，在这里完成了组件的加载和初始化；</li>
@@ -231,10 +231,10 @@
 <h3 id="3-10componentWillUnmount"><a href="#3-10componentWillUnmount" class="headerlink" title="3.10componentWillUnmount"></a>3.10componentWillUnmount</h3><p>当组件要被从界面上移除的时候，就会调用componentWillUnmount()，在这个函数中，可以做一些组件相关的清理工作，例如取消计时器、网络请求等。</p>
 <pre><code class="reactnative">void componentWillUnmount()</code></pre>
 <h3 id="3-11constructor"><a href="#3-11constructor" class="headerlink" title="3.11constructor"></a>3.11constructor</h3><p>构造函数在生命周期图谱中没有体现，但是它是组件构造时候必须调用的函数。constructor参数接受两个参数<code>props</code>,<code>context</code>，可以获取到父组件传下来的<code>props</code>,<code>context</code>,如果你想在constructor构造函数内部(注意是内部哦，在组件其他地方是可以直接接收的)使用<code>props</code>或<code>context</code>,则需要传入，并传入<code>super</code>对象。当然如果你只需要在构造函数内使用<code>props</code>或者<code>context</code>，那么只传入一个参数即可，如果都不可以，就都不传。注意：只要组件存在constructor,就必要要写super,否则<code>this</code>指向会错误。</p>
-<h2 id="四、调用"><a href="#四、调用" class="headerlink" title="四、调用"></a>四、调用</h2><p><img src="https://upload-images.jianshu.io/upload_images/18236822-f77db779ca8a0983.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h2 id="四、调用"><a href="#四、调用" class="headerlink" title="四、调用"></a>四、调用</h2><p><img src="/images/reactnative/reactnativeSeries/reactnativeSeries10/reactLifes1.png" alt="reactLifes"></p>
 <p><strong>欢迎大佬纠错指导，欢迎交流学习。</strong></p>
 <blockquote>
-<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/Code4GL">https://github.com/Code4GL</a><br>公众号：code_everything<br>QQ：771841496<br>邮箱：<a href="mailto:&#103;&#x75;&#97;&#110;&#108;&#x69;&#x31;&#x39;&#57;&#x31;&#x40;&#49;&#x36;&#x33;&#x2e;&#99;&#x6f;&#109;">&#103;&#x75;&#97;&#110;&#108;&#x69;&#x31;&#x39;&#57;&#x31;&#x40;&#49;&#x36;&#x33;&#x2e;&#99;&#x6f;&#109;</a></p>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/Code4GL">https://github.com/Code4GL</a><br>公众号：code_everything<br>QQ：771841496<br>邮箱：<a href="mailto:&#103;&#x75;&#97;&#x6e;&#x6c;&#x69;&#49;&#x39;&#57;&#49;&#64;&#49;&#54;&#51;&#46;&#x63;&#x6f;&#x6d;">&#103;&#x75;&#97;&#x6e;&#x6c;&#x69;&#49;&#x39;&#57;&#49;&#64;&#49;&#54;&#51;&#46;&#x63;&#x6f;&#x6d;</a></p>
 </blockquote>
 <p><img src="/images/code_everything.jpg" alt="code_everything"></p>
 
