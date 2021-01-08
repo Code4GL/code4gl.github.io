@@ -75,13 +75,25 @@ PUB_HOSTED_URL              [https://pub.flutter-io.cn](ht
 
 ![插件安装](/images/flutter/flutterSeries/flutterSeries01/android-studio-dart.png)
 
-安装完成之后运行`flutter doctor`检查一下，如果有小伙伴安装好了之后还是提示有错误，可以无视这个提示。这是Android Studio 4.1中插件地址更换导致的，实际已经安装成功了。
+安装完成之后运行`flutter doctor`检查一下，如果有小伙伴安装好了之后还是提示有错误，可以无视这个提示。这是Android Studio 4.1中插件地址更换导致的，实际已经安装成功了。可以忽略此错误。
 
 ![插件安装](/images/flutter/flutterSeries/flutterSeries01/android-studio-plugin1.png)
 
 #### 1.3.3 Connected device
 
-关于设备分为两种：真机和模拟器。模拟器推荐可以参考之前的文章[ReactNative系列之开发工具-模拟器选择](/ReactNative/ReactNative系列/08ReactNative系列之开发工具-模拟器选择/)，推荐`Genymotion`专业开发Android模拟器。
+关于设备分为两种：真机和模拟器。模拟器推荐可以参考之前的文章[《ReactNative系列之开发工具-模拟器选择》](/ReactNative/ReactNative系列/08ReactNative系列之开发工具-模拟器选择/)，推荐`Genymotion`专业开发Android模拟器，官网地址：[https://www.genymotion.com/](https://www.genymotion.com/)。
+
+1. 下载时需要注册账号，用邮箱注册完成后登录；
+2. 如果计算机未安装VirtualBox，登录后请下载`With VirtualBox`版本，否则可以下载`WithOut VirtualBox`版本；
+3. 安装完成后，软件需要登录才能使用，登录刚才官网注册的账号即可；
+4. 登录后，选择`Personal Use`版本，此版本仅供个人免费使用；
+5. 最后，同意隐私政策，新建模拟器即可。
+
+![Genymotion](/images/flutter/flutterSeries/flutterSeries01/Genymotion1.png)
+
+![Genymotion](/images/flutter/flutterSeries/flutterSeries01/Genymotion2.png)
+
+![Genymotion](/images/flutter/flutterSeries/flutterSeries01/Genymotion3.png)
 
 **欢迎大佬纠错指导，欢迎交流学习。**
 
