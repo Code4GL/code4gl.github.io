@@ -5,21 +5,31 @@
 # Site
 title: 一修
 subtitle: "念念不忘，必有回响！"
-description: ""
+description: "前端工程师"
 keywords:
+  - Flutter
+  - ReactNative
+  - JavaScript
+  - HTML
+  - 前端工程师
 author: 一修
 language: zh
 timezone: ""
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://example.com
+url: https://code4gl.github.io/
 root: /
 permalink: :title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 
 # Directory
 source_dir: source

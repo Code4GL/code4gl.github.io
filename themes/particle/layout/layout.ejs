@@ -1,5 +1,4 @@
-<% 
-    var pageTitle = config.title+' || '
+<% var pageTitle=config.title+' || '
     if(page.title) pageTitle+=page.title;
     else if(is_category()) pageTitle+=page.category;
     else if(is_tag()) pageTitle+=page.tag;
@@ -33,6 +32,7 @@
     <meta name="author" content="<%- config.author %>">
     <meta name="description" content="<%- config.description %> ">
     <meta name="keywords" content="<%- config.keywords %> ">
+    <meta name="google-site-verification" content="CebvJgZgrgSeXhlE9sY0FBkDqdqUzZJGlCNzxn9raUU" />
     <link rel="icon" href="<%- rootlink %><%- theme.head_img %>">
     <link rel="stylesheet" href="<%- rootlink %>css/antd.min.css">
     <% if(theme.style == "night"){ %>
