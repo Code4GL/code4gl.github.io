@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>一修 || tags</title>
+    <title>一修 || 念念不忘，必有回响！</title>
     <meta name="author" content="一修">
     <meta name="description" content="前端工程师 ">
     <meta name="keywords" content=" ">
@@ -149,108 +149,206 @@
                 </div>
 
                 <div id="main">
-                     
-<div class="categories-tags">
-    
-    <div class="all-s">
+                    <div id="home-head" style=background-image:url('home.jpg')>
+    <script>
+        var menu = document.getElementById("menu")
+        menu.className += " menu-color"
+    </script>
+     
+    <div id="home-info" class="home-info" @click="home_click">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>一修</h1>
+                <h3>念念不忘，必有回响！</h3>
+                <h5>前端工程师</h5>
+            </div>
+        </span>
+    </div>
+     
+</div>
+
+
+
+<div id="home-posts-wrap" class=>
+    <div id="home-posts">
+
+        <div id="posts">
+            
+
+<div class="post">
+
+    <a href="/essay/第一次总是比较重要的/">
+        <h2>
+            第一次总是比较重要的
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
         
-        
-        <span>
-            <a href="/tags/混合App/" style=background:#ffa2c4>
+        <span class="category">
+            <a href="/categories/随笔">
                 <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                混合App
+                    <a-icon type="book" theme="filled" /></span>
+                随笔
             </a>
         </span>
         
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/12/22
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            想着开始好久，但一直未动手。终于在内心不断的罪恶感驱使下，开始了第一次随笔。
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
         
         
-        <span>
-            <a href="/tags/自己/" style=background:#ffa2c4>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
+        <span class="tag">
+            
+            <a href="/tags/自己" style=color:#ffa2c4>
                 自己
             </a>
         </span>
         
-        
-        
-        <span>
-            <a href="/tags/生活/" style=background:#ff7d73>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
+        <span class="tag">
+            
+            <a href="/tags/生活" style=color:#ff7d73>
                 生活
             </a>
         </span>
         
+    </div>
+
+    <a href="/essay/第一次总是比较重要的/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+
+             
+<div class="page-current">
+
+    <div class="prev">
         
-        
-        <span>
-            <a href="/tags/高性能JavaScript/" style=background:#ff7d73>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                高性能JavaScript
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/原生JS/" style=background:#00bcd4>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                原生JS
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/ReactNative系列/" style=background:#00a596>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                ReactNative系列
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/Flutter系列/" style=background:#ffa2c4>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                Flutter系列
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/Flutter问题/" style=background:#ff7d73>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                Flutter问题
-            </a>
-        </span>
-        
+        <a href="/page/3/">
+            <span class="page-num">
+                <a-icon type="caret-left" theme="filled" />
+            </span>
+        </a>
         
     </div>
-    <div id="archives">
+
+    <div class="page-index">
+
+        
+        <span>
+
+            
+            <a href="/"><span class="page-num">1</span></a>
+            <span class="page-omit">...</span>
+            
+
+            
+
+            
+
+            
+            <a href="/page/2">
+                <span class="page-num">
+                    2
+                </span>
+            </a>
+            
+
+            
+            <a href="/page/3/">
+                <span class="page-num">
+                    3
+                </span>
+            </a>
+        </span>
+        
+
+        <span class="current">
+            4
+        </span>
+
+        
+
+    </div>
+
+    <div class="next">
         
     </div>
-    <script>
-        new Vue({
-            el: '#archives'
-        })
-    </script>
+
+</div>
+
+        </div>
+    </div>
+    
+    <div id="home-card">
+        <a-affix :offset-top="card_top">
+    <a-card class="card-style" style="width: 300px">
+        <div class="avatar">
+            <img src="images/avatar.jpg " alt="头像">
+        </div>
+        <div class="name">
+            一修
+        </div>
+        <div class="descriptions">
+            
+            <div class="description">
+                念念不忘，必有回响！
+            </div>
+            
+        </div>
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/Code4GL">
+
+                    
+                    <a-icon type="github"
+                        theme="filled" />
+                    
+                </a>
+            </span>
+            
+        </div>
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">
+                    Particle主题地址
+                </a>
+            </div>
+            
+        </div>
+    </a-card>
+</a-affix>
+    </div>
+    
 </div>
                      
 <footer id="footer">
