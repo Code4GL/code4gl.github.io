@@ -26,10 +26,17 @@ pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
+# SEO配置
 sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
+
+baidu_url_submit:
+  count: 5 ## 提交最新的五个链接
+  host: code4gl.github.io ## 百度站长平台中注册的域名
+  token: ikiTnmiQhG2LThE6 ## 准入秘钥
+  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
 
 # Directory
 source_dir: source
@@ -113,6 +120,7 @@ theme: particle
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: https://github.com/Code4GL/code4gl.github.io.git
-  branch: master
+  - type: git
+    repo: https://github.com/Code4GL/code4gl.github.io.git
+    branch: master
+  - type: baidu_url_submitter ## 添加这里内容即可
